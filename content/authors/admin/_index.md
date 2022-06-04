@@ -45,10 +45,15 @@ user_groups:
 - Visitors
 ---
 
-I am Aseem Deodhar. I work as a Research Analyst with the Metropolitan Area Planning Council - [MAPC](https://www.mapc.org/).
+I am Aseem Deodhar. I am a Research Analyst at the Metropolitan Area Planning Council ([MAPC](https://www.mapc.org/)) in their Data Services department. The MAPC is the regional planning authority for Greater Boston. 
 
-I recently completed my Master of Science in Urban Informatics from Northeastern University under [Dr. Dan O’Brien](<https://cssh.northeastern.edu/people/faculty/daniel-t-obrien/>). I feel very honored to have been awarded the [Graduate Student Leadership Award](https://cssh.northeastern.edu/policyschool/2020/04/end-of-year-awards-2020/) upon graduating. 
+I am experienced in, and passionate about civic technology and its applications in transportation, housing studies, urban & regional planning, and policy development. Here, you can see these interests combine and display themselves through academic, professional, as well as personal projects. I am always looking for advice on, and to collaborate with others on my personal research projects.
 
-I am experienced in, and passionate about civic technology and its applications in transportation, urban & regional planning, and policy development. Here, you can see these interests combine and display themselves through academic, professional, as well as personal projects. I am always looking for advice on, and to collaborate with others on my personal research projects.
+I graduated with a [Master of Science in Urban Informatics from Northeastern University](https://cssh.northeastern.edu/policyschool/program/ms-urban-informatics/) in May 2020, and also holds an undergraduate degree in Architecture from the University of Pune.
 
-I built this website using the ```{blogdown}``` package with Rmarkdown. [You can do it too](https://bookdown.org/yihui/blogdown/)!
+He is passionate about civic technology, urban & regional planning, and data science, and has nearly four years of experience working with city and state agencies across the world on a wide range of public issues.
+
+I love to ride my bike across the region I live in, and you can see a documentation of my trips on my travel blog [ride351ma.bike](https://ride351ma.bike/)
+
+I built this website (and my blog!) using the ```{blogdown}``` package with Rmarkdown. [You can do it too](https://bookdown.org/yihui/blogdown/)!
+

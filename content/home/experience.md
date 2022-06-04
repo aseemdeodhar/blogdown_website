@@ -27,10 +27,14 @@ date_format = "Jan 2006"
   date_end = ""
   description = """
   
-* Automate ETL pipelines to process the 2020 Census and 1 & 5 year ACS (American Community Survey) data to be more human readable for planners and the general public to use in their work. [DataCommon](https://datacommon.mapc.org/)
-  
+* Automate ETL pipelines to process the 2020 Census and 1 & 5 year ACS (American Community Survey) data, and CHAS Housing Survey data to be more human readable for planners and the general public to use in their work. [DataCommon](https://datacommon.mapc.org/)
+
 * Assist analysts and researchers in the [MAPC's](https://www.mapc.org/) Data Services department by utilizing various data wrangling and analysis tools such as R, Python, GIS software etc. to develop insights for various urban and regional planning issues in Metro Boston.
 
+* Contributed spatial and statistical analyses to [MAPC's recommendations](https://www.mapc.org/resource-library/mbta-multifamily-zoning/) on Section 3A of the Massachusetts Zoning Act to support the development of transit oriented multifamily housing development in Greater Boston.
+
+* Developed and periodically maintain the [{mapcdatakeys} R-package](https://github.com/MAPC/mapcdatakeys) to have standardized geographic keys and crosswalks for various geographic levels in Massachusetts such as municipalities, census tracts, blocks, and block groups.
+  
 * Developed the [{mortgager} R-package](/project/mortgager/) to calculate costs related to home-ownership for MassHousing's Commonwealth Builder attainable home-ownership program.
 
 * Respond to various data engineering and analysis requests from planners in other departments such as transportation, public health, housing, and economic development.

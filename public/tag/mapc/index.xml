@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MAPC | Aseem Deodhar</title>
+    <link>/tag/mapc/</link>
+      <atom:link href="/tag/mapc/index.xml" rel="self" type="application/rss+xml" />
+    <description>MAPC</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Aseem Deodhar © 2021</copyright><lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/static/img/avatar.jpg</url>
+      <title>MAPC</title>
+      <link>/tag/mapc/</link>
+    </image>
+    
+    <item>
+      <title>Mapping in R</title>
+      <link>/project/mapping_tutorial/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>/project/mapping_tutorial/</guid>
+      <description>
+&lt;script src=&#34;index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;spatial-analysis-and-mapping-in-r-using-the-sf-and-ggplot2-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Spatial Analysis and Mapping in R using the {sf} and {ggplot2} packages&lt;/h2&gt;
+&lt;p&gt;On March 17th of 2021, I had the opportunity to introduce the concepts of spatial analysis and mapping in R to the Big Data for Cities class at Northeastern University - the same class where I had initially learned all of this in the Fall of 2018.&lt;/p&gt;
+&lt;p&gt;I gave a brief overview of the basic components of a spatial data file, and how to use the {sf} and {ggplot2} packages to map the contents of a spatial data file, as well as some popularly used functions to manipulate spatial objects.&lt;/p&gt;
+&lt;p&gt;In addition to the technical introduction, I spoke about the various kinds of administrative geographies in the United States - political and census geographies.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/r_mapping/mbta_commrail_network.jpeg&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;code-and-files&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Code and Files&lt;/h3&gt;
+&lt;p&gt;You can download the code and data files used to plot the map above &lt;a href=&#34;https://github.com/aseemdeodhar/r_mapping&#34;&gt;from this link&lt;/a&gt; and try to map, and manipulate it. I’d love to see what maps you make!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>mortgager - R Package</title>
+      <link>/project/mortgager/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      <guid>/project/mortgager/</guid>
+      <description>
+&lt;script src=&#34;index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;mortgager&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;{mortgager}&lt;/h1&gt;
+&lt;p&gt;This package was developed to calculate homeownership costs for MassHousing’s &lt;a href=&#34;https://www.masshousing.com/en/developers/commonwealth-builder&#34;&gt;Commonwealth Builder Program&lt;/a&gt;. This package was used to analyse a proprietary dataset of home sale records from 2010 to 2020 in Massachusetts to determine the affordability of existing and historic sales.&lt;/p&gt;
+&lt;div id=&#34;formula&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Formula&lt;/h2&gt;
+&lt;p&gt;The formula used for calculating monthly home-ownership payment amounts is based on a widely accepted monthly mortgage formula, which here is adapted from that seen on the &lt;a href=&#34;https://www.nerdwallet.com/mortgages/mortgage-calculator/calculate-mortgage-payment&#34;&gt;Nerdwallet website&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/mortgager/formula.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Where:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;M&lt;/strong&gt; = Monthly mortgage amount&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;P&lt;/strong&gt; = Principal amount, ie total loan amount&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;i&lt;/strong&gt; = Monthly mortgage interest rate&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;n&lt;/strong&gt; = Number of payments across loan duration. (This is generally assumed to be number of months. For example, a loan with a payback period of 30 years, will have 360 payments in total)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition to the monthly mortgage payment, there are other costs associated with home-ownership which are then added to calculate total home-ownership costs, namely:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;PMI factor&lt;/strong&gt; – only for loans with a downpayment less than 20%, assumed at 7.5% annually on the mortgage amount&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Home-owners&lt;/strong&gt; insurance – assumed at $1000 annually&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Condo fees&lt;/strong&gt; – applicable only to condominium sales, assumed at $1000 annually&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Property Tax&lt;/strong&gt; - an annual percentage amount taxed on assessed property value dependent on the jurisdiction the unit is located in.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;installation&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;p&gt;You can install the released version of mortgager with:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;devtools::install_github(&amp;quot;aseemdeodhar/mortgager&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mortgager-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;{mortgager}&lt;/h2&gt;
+&lt;p&gt;Load the  package with this line:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(mortgager)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;examples-for-each-function&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Examples for each function:&lt;/h2&gt;
+&lt;div id=&#34;mortgagermonthlypayment&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;mortgager::monthlypayment()&lt;/h3&gt;
+&lt;p&gt; calculates monthly home-ownership costs based on tax rates, interest rates, downpayment rate, and home cost price.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;monthlypayment(mortgage_rate = 3,
+               property_tax = 12,
+               downpayment_rate = .2,
+               home_price = 450000)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2051.108&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mortgagermax_homeprice&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;mortgager::max_homeprice()&lt;/h3&gt;
+&lt;p&gt; calculates maximum affordable home price based on annual income with a set monthly housing cost percentage (default is 30%).&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;max_homeprice(annualinc = c(61000, 75000, 22330, 120000),
+              mortgage_rate = 2.7,
+              property_tax = 6)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 4 x 4
+##   income_level atincome  at80pc at120pc
+##          &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
+## 1        61000  224144. 179316. 268973.
+## 2        75000  278561. 222849. 334273.
+## 3        22330   73838.  59070.  88606.
+## 4       120000  453471. 362777. 544166.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mortgagerdownpayment_amt&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;mortgager::downpayment_amt()&lt;/h3&gt;
+&lt;p&gt; calculates the total downpayment amount based on sale price and downpayment rate&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;downpayment_amt(home_price = 250000,
+                downpayment_rate = 0.10)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 25000&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mortgagerreqd_income&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;mortgager::reqd_income()&lt;/h3&gt;
+&lt;p&gt; calculates the minimum annual income required for total housing costs to remain at or below a set proportion of household income.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;reqd_income(monthlypayment = 2000,
+            housing_cost_rate = 0.30)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 80000&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

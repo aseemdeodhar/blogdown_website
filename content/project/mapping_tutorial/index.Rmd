@@ -1,0 +1,42 @@
+---
+date: "2021-03-17T00:00:00Z"
+external_link: ""
+image:
+  caption: Mapping in R
+  focal_point: Smart
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/aseemvd
+- icon: github
+  icon_pack: fab
+  name: Github
+  url: https://github.com/aseemdeodhar/r_mapping
+slides: r_mapping
+summary: Spatial Analysis and Mapping in R using the \{sf\} package
+tags:
+- Spatial Analysis
+- Professional
+- MAPC
+- Academic
+title: Mapping in R 
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+## Spatial Analysis and Mapping in R using the {sf} and {ggplot2} packages
+
+On March 17th of 2021, I had the opportunity to introduce the concepts of spatial analysis and mapping in R to the Big Data for Cities class at Northeastern University - the same class where I had initially learned all of this in the Fall of 2018.
+
+I gave a brief overview of the basic components of a spatial data file, and how to use the {sf} and {ggplot2} packages to map the contents of a spatial data file, as well as some popularly used functions to manipulate spatial objects.
+
+In addition to the technical introduction, I spoke about the various kinds of administrative geographies in the United States - political and census geographies.
+
+![](/img/project/r_mapping/mbta_commrail_network.jpeg)
+
+### Code and Files
+
+You can download the code and data files used to plot the map above [from this link](https://github.com/aseemdeodhar/r_mapping) and try to map, and manipulate it. I'd love to see what maps you make!

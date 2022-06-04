@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JanaUSP | Aseem Deodhar</title>
+    <link>/tag/janausp/</link>
+      <atom:link href="/tag/janausp/index.xml" rel="self" type="application/rss+xml" />
+    <description>JanaUSP</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Aseem Deodhar © 2021</copyright><lastBuildDate>Thu, 13 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/static/img/avatar.jpg</url>
+      <title>JanaUSP</title>
+      <link>/tag/janausp/</link>
+    </image>
+    
+    <item>
+      <title>Professional Design Portfolio</title>
+      <link>/project/jana_work/</link>
+      <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/project/jana_work/</guid>
+      <description>
+
+
+&lt;p&gt;The Professional Design Portfolio contains curated design documentation of two major projects completed between 2016 and 2018. Both projects contain elements relevant to the study of urban space, and the human interactions that create these spaces.&lt;/p&gt;
+&lt;p&gt;Please click on the &lt;em&gt;slides&lt;/em&gt; button above or &lt;a href=&#34;/slides/jana/#/&#34;&gt;here&lt;/a&gt; to see the portfolio pages.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Specifications for Urban Roads Execution Phases 1 &amp;amp; 3&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tender S.U.R.E. | Jana USP | 2016 - present&lt;/p&gt;
+&lt;p&gt;Tender S.U.R.E. are the first set of guidelines in India concieved by Jana Urban Space Foundation for urban road design redevelopment and procurement for execution. The Tender S.U.R.E. standards aim in making the road more durable, ease pedestrian movement, ensure free flow of traffic and avoid unnecessary road cuttings by various utility agencies.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Upgradation and Redevelopment of A Historic Economic Centre&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Krishna Rajendra Market | Jana USP | 2017 - present&lt;/p&gt;
+&lt;p&gt;KR (Krishna Rajendra) Market in Bangalore is a historic public market dating back to the early 1920s. Since then it has transformed from a small neighborhood market to the largest supplier of fruits, vegetables, meat, and other sundry items to Bangalore; a city of 11 million people and growing. Although KR Market is the largest market in the city in terms of volume and value of commodities exchanged, it faces a number of issues that deter it from living up to its full potential. Today it is noted as a major flower market as well as an iconic Bangalorean institution.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

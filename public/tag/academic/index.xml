@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Academic | Aseem Deodhar</title>
+    <link>/tag/academic/</link>
+      <atom:link href="/tag/academic/index.xml" rel="self" type="application/rss+xml" />
+    <description>Academic</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Aseem Deodhar © 2021</copyright><lastBuildDate>Wed, 17 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/static/img/avatar.jpg</url>
+      <title>Academic</title>
+      <link>/tag/academic/</link>
+    </image>
+    
+    <item>
+      <title>Mapping in R</title>
+      <link>/project/mapping_tutorial/</link>
+      <pubDate>Wed, 17 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>/project/mapping_tutorial/</guid>
+      <description>
+&lt;script src=&#34;index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;spatial-analysis-and-mapping-in-r-using-the-sf-and-ggplot2-packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Spatial Analysis and Mapping in R using the {sf} and {ggplot2} packages&lt;/h2&gt;
+&lt;p&gt;On March 17th of 2021, I had the opportunity to introduce the concepts of spatial analysis and mapping in R to the Big Data for Cities class at Northeastern University - the same class where I had initially learned all of this in the Fall of 2018.&lt;/p&gt;
+&lt;p&gt;I gave a brief overview of the basic components of a spatial data file, and how to use the {sf} and {ggplot2} packages to map the contents of a spatial data file, as well as some popularly used functions to manipulate spatial objects.&lt;/p&gt;
+&lt;p&gt;In addition to the technical introduction, I spoke about the various kinds of administrative geographies in the United States - political and census geographies.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/r_mapping/mbta_commrail_network.jpeg&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;code-and-files&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Code and Files&lt;/h3&gt;
+&lt;p&gt;You can download the code and data files used to plot the map above &lt;a href=&#34;https://github.com/aseemdeodhar/r_mapping&#34;&gt;from this link&lt;/a&gt; and try to map, and manipulate it. I’d love to see what maps you make!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fifteen Minute Boston - Walk, Bike, Transit</title>
+      <link>/project/15_min_boston/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/project/15_min_boston/</guid>
+      <description>
+
+
+&lt;div id=&#34;minute-boston&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;15-minute Boston&lt;/h2&gt;
+&lt;p&gt;Paris, under their mayor Anne Hidalgo is working to completely transform how people move around their city by introducing &lt;a href=&#34;https://www.citylab.com/environment/2020/02/paris-election-anne-hidalgo-city-planning-walks-stores-parks/606325/&#34;&gt;the ’15-minute’ city&lt;/a&gt;, where all aspects of a person’s life are achievable within a 15-minute walk, bike, or transit ride from their residence.&lt;/p&gt;
+&lt;p&gt;A project of this scale and magnitude will be required to be staged and completed in phases. If we consider the city of Boston, Massachusetts, how can we adapt this ’15-minute’ city plan here, taking into account its unique strengths, weaknesses, opportunities, and challenges?&lt;/p&gt;
+&lt;p&gt;Understandably, Boston’s current configuration does not allow for such a situation. Furthermore, a 15 minute walk is significantly shorter than a 15 minute bike ride, and depending on the mode, public transit will take you further than a bike in 15 minutes.&lt;/p&gt;
+&lt;p&gt;In what ways would Boston’s land-use configuration have to change, to accomodate these requirements? Does it really make sense to concentrate all businesses in one centralized ‘downtown’ area or Financial District?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can we use POI data to evaluate the accessibility of various 15-minute regions based on population and car ownership?&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/measuring-pedestrian-accessibility-97900f9e4d56&#34;&gt;Can we create accessibility maps&lt;/a&gt; that allow Paris and other cities identify which areas require more amenities to make it eligible under a 15-minute accessible region?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;minute-walk-zones&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;15 Minute Walk Zones&lt;/h3&gt;
+&lt;p&gt;By generating hexagonal tesselations of side equal to 1 mile (the generally accepted distance an average person can walk in 15 minutes) we divide the City of Boston into zones equalling a 1 mile radius. Since the radius of 1 mile is equal to the side of the hexagon, the circumscribed radius is also equal to 1 mile. This effectively creates (for each 1-mile hexagon) up to 6 overlapping zones with neighboring hexagons.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;1 mile radius hexagons&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;1 mile radius overlapping circles&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_walk.png&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_walk_circles.png&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Working with the existing urban layout and physical infrastructure, how do we ensure that all the above mentioned services can be made available within this 1-mile zone?
+We mapped these two layers together: by getting the proportion of land covered under each major use type, how does each zone compare to the city-wide average?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bos_zones_ratio &amp;lt;- bos_zones %&amp;gt;% 
+                    select(SUBDISTRIC, area_sqm) %&amp;gt;% 
+                    group_by(SUBDISTRIC) %&amp;gt;% 
+                    summarise(area_sqm = sum(area_sqm))
+
+bos_zones_ratio$landuseratio &amp;lt;- (bos_zones_ratio$area_sqm/sum(bos_zones_ratio$area_sqm))*100
+
+bos_15minzones_ratio &amp;lt;- bos_15minzones %&amp;gt;% 
+  select(TARGET_FID, SUBDISTRIC, area_sqm) %&amp;gt;% 
+  group_by(TARGET_FID, SUBDISTRIC) %&amp;gt;% 
+  summarise(area_sqm = sum(area_sqm)) %&amp;gt;% 
+  mutate(landuseratio = (area_sqm/sum(area_sqm))*100)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Land Use for Boston City&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Land use proportions&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_landuse.png&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_landuse_tableau.png&#34; /&gt; &lt;a href=&#34;https://public.tableau.com/profile/aseem.deodhar#!/vizhome/LandUseDiversityinBoston/Dashboard1&#34;&gt;&lt;em&gt;see data on Tableau Public&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;What policy, design and planning changes can be made to transform each zone into a self-sustaining 15-minute walk zone?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Narrative&lt;/strong&gt;
+* Who and where will interventions make the most difference?
+* How can we avoid falling into the systematic bias created by 20 th century urban planning?
+* How can we create a general purpose analysis to evaluate 15-minute accessibility for any city?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pedestrianizing-the-south-end&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pedestrianizing the South End:&lt;/h2&gt;
+&lt;p&gt;Boston’s South End creates a strong case for a carfree neighborhood: dense and surrounded by multiple high frequency transit options, it is interestingly placed as a residential neighborhood within the city.&lt;/p&gt;
+&lt;p&gt;With no residential unit more than 300 meters away from either a MBTAbus, Green line, or Orange line station, the area also has a low car dependency. The area is bound by Mass Ave, Huntington Ave, and Washington St. With Dartmouth St, Newton St, Tremont St, and Columbus Ave dividing the neighborhood into 8 blocks. Converted to alternating one-ways, (with bidirectional bike lanes and bus lanes where required)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/15_min_boston/ped_southend-01.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Visualizing The Pune Tree Census 2015</title>
+      <link>/project/pune_trees/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/project/pune_trees/</guid>
+      <description>&lt;h1 id=&#34;pune-tree-census-2015&#34;&gt;Pune Tree Census 2015&lt;/h1&gt;
+&lt;p&gt;The Tree Census was first conducted in 2015, and enumerated data on 3.2 million trees spread across the Municipal limits of Pune city. According to T.V. Ramachandran from the IISc, a ratio of 1 tree per person is required for a healthy urban environment. Given that the 2011 census indicated a human population of 3.12 million, we can consider this to be a healthy coverage. However we can also see a large imbalance in the location of these trees, with some areas having a greater density.&lt;/p&gt;
+&lt;h2 id=&#34;monthly-flowering-pattern&#34;&gt;Monthly Flowering Pattern&lt;/h2&gt;
+&lt;p&gt;Despite being in the tropics, vegetation in Pune shows seasonal variation in both foliage and flowers.&lt;/p&gt;
+&lt;p&gt;These series of maps show which areas in the city flowers bloom by season or month. Flowering season peaks in the summer from March to May.&lt;/p&gt;
+&lt;p&gt;In June with the advent of the monsoon, trees are green again, with flowering decreasing steadily through the winter months, until it’s summer again. By December, almost all the flowers are gone.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/01jan.jpg&#34; alt=&#34;january flowering&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/02feb.jpg&#34; alt=&#34;february flowering&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/03mar.jpg&#34; alt=&#34;march flowering&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/04apr.jpg&#34; alt=&#34;april flowering&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/05may.jpg&#34; alt=&#34;may flowering&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/06jun.jpg&#34; alt=&#34;june flowering&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/07jul.jpg&#34; alt=&#34;july flowering&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/08aug.jpg&#34; alt=&#34;august flowering&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/09sep.jpg&#34; alt=&#34;september flowering&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/10oct.jpg&#34; alt=&#34;october&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/11nov.jpg&#34; alt=&#34;november&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/12dec.jpg&#34; alt=&#34;december&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;flowering-animation&#34;&gt;Flowering Animation:&lt;/h2&gt;
+&lt;p&gt;These combined in an animated GIF file produce the following animation:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/pune_trees/pune_flowers_gif.gif&#34; alt=&#34;monthly animation&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Profiling the sidewalks of Boston</title>
+      <link>/project/sidewalks/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      <guid>/project/sidewalks/</guid>
+      <description>
+
+
+&lt;div id=&#34;boston-sidewalks&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Boston Sidewalks&lt;/h1&gt;
+&lt;p&gt;Profiling the sidewalks of Boston from a social distancing point of view.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sidewalk Stress Index&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To develop the sidewalk stress index, we considered two criteria:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Population Density:
+Obtained from the &lt;a href=&#34;https://hifld-geoplatform.opendata.arcgis.com/datasets/landscan-usa&#34;&gt;LandScan datasource&lt;/a&gt;. Provides day and night incident population for a given area. It is a raster dataset with a pixel of approximately 90m by 90m size.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sidewalk Width:
+Obtained from the &lt;a href=&#34;https://data.boston.gov/dataset/sidewalk-inventory&#34;&gt;Analyze Boston&lt;/a&gt; which is the City of Boston’s open data hub. It includes data on sidewalk segments in the City of Boston. The main variable we are interested in is the Sidewalk Width, which is in feet.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By converting the raster population data into polygons, the mean sidewalk width incident on the cell was calculated with a spatial join.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(sf)
+library(dplyr)
+
+# Normalizing data to export as a shp file
+
+ls_day_boston &amp;lt;- read_sf(&amp;quot;landscan_r_analysis/boston_day_stress/boston_day_stress.shp&amp;quot;)
+ls_ngt_boston &amp;lt;- read_sf(&amp;quot;landscan_r_analysis/boston_night_stress/boston_night_stress.shp&amp;quot;)
+
+# Calculating percentile rank to get normalized data:
+
+# daytime population:
+ls_day_boston$nrm_pop_dy &amp;lt;- percent_rank(ls_day_boston$gridcode)
+ls_day_boston$nrm_swk_dy &amp;lt;- percent_rank(ls_day_boston$SWK_WIDTH)
+ls_day_boston$stress_dy &amp;lt;- ls_day_boston$nrm_pop_dy-ls_day_boston$nrm_swk_dy
+
+#nighttime population
+ls_ngt_boston$nrm_pop_nt &amp;lt;- percent_rank(ls_ngt_boston$gridcode)
+ls_ngt_boston$nrm_swk_nt &amp;lt;- percent_rank(ls_ngt_boston$SWK_WIDTH)
+ls_ngt_boston$stress_nt &amp;lt;- ls_ngt_boston$nrm_pop_nt-ls_ngt_boston$nrm_swk_nt
+
+# saving shapefiles
+st_write(ls_day_boston, &amp;quot;landscan_r_analysis/boston_day_stress/boston_day_stress.shp&amp;quot;, delete_layer = TRUE)
+st_write(ls_ngt_boston, &amp;quot;landscan_r_analysis/boston_night_stress/boston_night_stress.shp&amp;quot;, delete_layer = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Both values were normalized by percentile ranking between 0 &amp;amp; 1. By subtracting each cell’s normalized population, with its corresponding normalized mean sidewalk width, we could compare (city-wide) how high or low the ratio was compared to the city-wide average. A negative score indicates lower than average stress, and a positive score indicates higher than average stress. Thus, we can consider &lt;strong&gt;four&lt;/strong&gt; situational extremes:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Positive Score:&lt;/strong&gt; 0.01 to +1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Low Density &amp;amp; High Sidewalk width&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;High Density &amp;amp; Low Sidewalk width&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Negative Score:&lt;/strong&gt; -1 to -0.01&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Low Density &amp;amp; Low Sidewalk width&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;High Density &amp;amp; High Sidewalk width&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Neutral Score:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The fifth situation, would be a score of 0, indicating said location has a stress score comparable to the city-wide average.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sidewalks – Are they good enough?&lt;/p&gt;
+&lt;p&gt;Social distancing norms in the wake of the Covid-19 outbreak suggest keeping a distance of at least 6 feet from another person when outdoors.&lt;/p&gt;
+&lt;p&gt;Can we say something about where physical distancing by looking at Boston’s sidewalks?
+Can we estimate which areas are more likely to conform to distancing guidelines based on combining sidewalk and other data?&lt;/p&gt;
+&lt;p&gt;To ensure that residents are able to comply with social distancing guidelines Many cities have restricted vehicular traffic on certain streets, or extended ‘sidewalks’ by taking in lanes by adding flex posts or traffic cones.&lt;/p&gt;
+&lt;p&gt;This idea is being developed in collaboration with &lt;a href=&#34;https://uploads.knightlab.com/storymapjs/158f477ab79c7702de8c33b817ddae41/varun-resume/index.html&#34;&gt;Varun Adibhatla&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Data&lt;/strong&gt;
+1. Polyline and polygon shapefiles of sidewalks for the city of Boston. These can be used to identify sections of sidewalks and streets which do not adequately serve width regulations.&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ornl.gov/news/gis-landscan-goes-public&#34;&gt;LandScan data&lt;/a&gt; - Widely considered the “gold standard of population and mapping data in the United States, (this dataset) captures daytime and nighttime activity of the U.S. population at a resolution of roughly 90 meters or about 300 feet.”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Profile Boston Sidewalks for completeness and quality&lt;/li&gt;
+&lt;li&gt;Join with Landscan data&lt;/li&gt;
+&lt;li&gt;Identify areas with high/low sidewalk&amp;lt;&amp;gt;human activity&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/what-is-a-relationship-map/&#34;&gt;Build a relationship map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Identify areas that are likely to be infection hotspots (high population activity, low sidewalk widths)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;minute-boston&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;15-minute Boston&lt;/h2&gt;
+&lt;p&gt;Paris, under their mayor Anne Hidalgo is working to completely transform how people move around their city by introducing &lt;a href=&#34;https://www.citylab.com/environment/2020/02/paris-election-anne-hidalgo-city-planning-walks-stores-parks/606325/&#34;&gt;the ’15-minute’ city&lt;/a&gt;, where all aspects of a person’s life are achievable within a 15-minute walk, bike, or transit ride from their residence.&lt;/p&gt;
+&lt;p&gt;A project of this scale and magnitude will be required to be staged and completed in phases. If we consider the city of Boston, Massachusetts, how can we adapt this ’15-minute’ city plan here, taking into account its unique strengths, weaknesses, opportunities, and challenges?&lt;/p&gt;
+&lt;p&gt;Understandably, Boston’s current configuration does not allow for such a situation. Furthermore, a 15 minute walk is significantly shorter than a 15 minute bike ride, and generally speaking public transit will take you further than a bike in 15 minutes.&lt;/p&gt;
+&lt;p&gt;In what ways would Boston’s land-use configuration have to change, to accomodate these requirements? Does it really make sense to concentrate all businesses in one centralized ‘downtown’ area or Financial District?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can we use POI data to evaluate the accessibility of various 15-minute regions based on population and car ownership?&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/measuring-pedestrian-accessibility-97900f9e4d56&#34;&gt;Can we create accessibility maps&lt;/a&gt; that allow Paris and other cities identify which areas require more amenities to make it eligible under a 15-minute accessible region?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;minute-walk-zones&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;15 Minute Walk Zones&lt;/h3&gt;
+&lt;p&gt;By generating hexagonal tesselations of side equal to 1 mile (the generally accepted distance an average person can walk in 15 minutes) we divide the City of Boston into zones equalling a 1 mile radius. Since the radius of 1 mile is equal to the side of the hexagon, the circumscribed radius is also equal to 1 mile. This effectively creates (for each 1-mile hexagon) up to 6 overlapping zones with neighboring hexagons.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;1 mile radius hexagons&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;1 mile radius overlapping circles&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_walk.png&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_walk_circles.png&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Working with the existing urban layout and physical infrastructure, how do we ensure that all the above mentioned services can be made available within this 1-mile zone?
+We mapped these two layers together: by getting the proportion of land covered under each major use type, how does each zone compare to the city-wide average?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bos_zones_ratio &amp;lt;- bos_zones %&amp;gt;% 
+                    select(SUBDISTRIC, area_sqm) %&amp;gt;% 
+                    group_by(SUBDISTRIC) %&amp;gt;% 
+                    summarise(area_sqm = sum(area_sqm))
+
+bos_zones_ratio$landuseratio &amp;lt;- (bos_zones_ratio$area_sqm/sum(bos_zones_ratio$area_sqm))*100
+
+bos_15minzones_ratio &amp;lt;- bos_15minzones %&amp;gt;% 
+  select(TARGET_FID, SUBDISTRIC, area_sqm) %&amp;gt;% 
+  group_by(TARGET_FID, SUBDISTRIC) %&amp;gt;% 
+  summarise(area_sqm = sum(area_sqm)) %&amp;gt;% 
+  mutate(landuseratio = (area_sqm/sum(area_sqm))*100)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Land Use for Boston City&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Land use proportions&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_landuse.png&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_landuse_tableau.png&#34; /&gt; &lt;a href=&#34;https://public.tableau.com/profile/aseem.deodhar#!/vizhome/LandUseDiversityinBoston/Dashboard1&#34;&gt;&lt;em&gt;see data on Tableau Public&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;What policy, design and planning changes can be made to transform each zone into a self-sustaining 15-minute walk zone?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Narrative&lt;/strong&gt;
+* Who and where will interventions make the most difference?
+* How can we avoid falling into the systematic bias created by 20 th century urban planning?
+* How can we create a general purpose analysis to evaluate 15-minute accessibility for any city?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Potential Interventions&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As we identified in our map, there are 4 key typologies we observe with regard to the Sidewalk Stress Index. These areas have different urban-level characteristics apart from just the Sidewalk Stress Index: their land-use typologies may vary, as can through vehicle volume, availability of public transit and alternative mobility needs, as well as parking requirements. All these factors affect the urban morphology of the neighborhood. Thus we identify a few areas in Boston which correspond to these typologies, and work out urban design interventions aimed at handling incident sidewalk stress:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Density&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Sidewalk Width&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Example Locality&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Current View&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Proposed View&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;High&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;High&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Copley Square&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/copley_1_old.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/copley_1_old.jpg&#34; alt=&#34;Copley Square Old View&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/copley_1_new.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/copley_1_new.jpg&#34; alt=&#34;Copley Square New View&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;Low&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Low&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Field’s Corner&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/fieldscorner_1_old.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/fieldscorner_1_old.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/fieldscorner_1_new.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/fieldscorner_1_new.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;Low&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;High&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Franklin Park&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/franklinpk_1_old.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/franklinpk_1_old.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/franklinpk_1_new.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/franklinpk_1_new.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;High&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Low&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Financial District/Old State House&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/oldstatehouse_4_old.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/oldstatehouse_4_old.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/oldstatehouse_4_new.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/oldstatehouse_4_new.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Developing Transit Corridors for Hospital Workers</title>
+      <link>/project/hosp_workers/</link>
+      <pubDate>Fri, 20 Mar 2020 00:00:00 +0000</pubDate>
+      <guid>/project/hosp_workers/</guid>
+      <description>
+
+
+&lt;div id=&#34;a-study-to-develop-transit-corridors-for-healthcare-workers-between-home-and-work&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;A Study To Develop Transit Corridors for Healthcare Workers between Home and Work&lt;/h1&gt;
+&lt;p&gt;After the declaration of Stay at Home orders or guidelines across the world, transit use has plummeted across all regions. The MBTA experienced almost an &lt;a href=&#34;https://www.mbtabackontrack.com/blog/blog/117-covid-19-and-mbta-ridership-part4&#34;&gt;80% drop in service usage&lt;/a&gt; use following such guidelines in the Commonwealth of Massachusetts.&lt;/p&gt;
+&lt;p&gt;This means that approximately 20% of users are still riding. Who are these 20%? They are people who’s occupations have been classified as ‘Essential Services’, and include everyone who cannot do their job sitting at home.&lt;/p&gt;
+&lt;p&gt;Among these essential workers, are also healthcare workers - who deal with and handle patients afflicted with Covid-19 everyday. Without wanting to add to the mess of visualizations populating the data world out there, in what way could I still contribute?&lt;/p&gt;
+&lt;p&gt;In case of prolonged and/or heightened intensity of the current crisis, as well as possible future crises, how can this unique requirement be addressed? Can we develop dedicated transportation services for healthcare workers between home and work?&lt;/p&gt;
+&lt;p&gt;This is a project under development, using data shared by the generous folks at the &lt;a href=&#34;https://transitapp.com/&#34;&gt;Transit App&lt;/a&gt; for research purposes only. Due to the proprietary and potentially identifiable nature of these data, I of course cannot share them with you, but if you have any ideas for the way this project may potentially take shape, please send me an email, and I would love to figure out a way to collaborate!&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Manifestation of Spatial Inequality in Pune</title>
+      <link>/project/asa_pune_ineq/</link>
+      <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/project/asa_pune_ineq/</guid>
+      <description>
+
+
+&lt;div id=&#34;introduction&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;According to the latest census data available globally, more than half the world’s population lives in urban areas. This, of course, is influenced by how governments define ‘urban area’ to be, as each nation uses its own criteria of density, employment, land-use, etc. However, one can agree that the proportion of dense, urban settlements is increasing. (Satterthwaite 2002)&lt;/p&gt;
+&lt;p&gt;Cities are more than just a collection of people. They promote the development of heterogeneity. Social interactions among dissimilar groups break down traditionally rigid hierarchical boundaries such as caste or race, and add a layer of complexity by introducing ‘class’. This further complicates existing social stratification. (Wirth 1938)&lt;/p&gt;
+&lt;p&gt;Historically, spatial segregation in human settlements in India has been along caste and religious lines. Caste also influences social and material capital. Today with the introduction of ‘class’, this spatial segregation in metropolitan cities tends to manifest itself into ‘elite’ and ‘non-elite’ areas. Using Mumbai as an example, Colaba is home to some of India’s wealthiest individuals, while Dharavi, less than 10 miles away is home to Asia’s largest slum. (Sarpotdar 2017)&lt;/p&gt;
+&lt;p&gt;Caste-based discrimination has been outlawed since the adoption of the current Constitution in 1950 and the Indian Penal Code. Despite provisions for affirmative action, and social development programs aimed at historically oppressed castes, they continue to face challenges in accessing quality education, housing, health services, employment, and public infrastructure. It should be noted, however, that regional differences exist in the way each group is identified, and the intensity with which discrimination occurs varies. (Zacharias and Vakulabharanam 2011) Dr. B. R. Ambedkar, the principal author of the current Constitution of India writes in his treatise ‘The Annihilation of Caste’ that caste is not only a division of labor but a division of laborers. The relationship between caste and class in India is a close one, and thus the two can seldom be considered two separate categories.&lt;/p&gt;
+&lt;p&gt;A large number of papers and research articles written on the state of India’s cities, the caste-system, social hierarchy, and economy exist. These studies have historically been carried out on the back of smaller sample-survey data both due to the lack of availability of higher resolution data, and lack of computational capability. Thus, the dearth in data has severely restricted the scope of researchers studying these indicators at individual city and sub-city levels. Today with an increase in the availability of digitized and tabulated high-resolution data resources, quantitative research is becoming a possibility – at least in the largest metropolitan cities. (Zacharias and Vakulabharanam 2011) The 4 traditional metropolitan cities of Mumbai, Delhi, Chennai, and Kolkata along with the three largest state capitals of Ahmedabad, Hyderabad, and Bangalore tend to dominate any discussion of urban study. However, with nearly five hundred cities in India with a population of more than one hundred thousand we need to understand these cities’ individual patterns of growth, development, and networks. (Sarpotdar 2017)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;background-why-pune&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Background: Why Pune?&lt;/h2&gt;
+&lt;p&gt;Most large-scale urban level studies with a national or international scope consider only the previously mentioned seven largest cities: Mumbai, Delhi, Chennai, Kolkata, Hyderabad, Bangalore, and Ahmedabad. Admittedly, these cities with a combined population of more than 80 million account for approximately twenty percent of the total urban population of India. However, due to the vast size of India’s population, nearly 50 cities have a population larger than 1 million. Pune is the 9th largest city by population, which according to the 2011 census stood at 3.12 million. (Census 2011)&lt;/p&gt;
+&lt;p&gt;Pune was one of the first cities in India studied from a lens of segregation and social divisions (Mehta 1969). This and previous studies by Gadgil in 1956 show that Pune is highly segregated, with clustering based on caste and income. However, the city has undergone vast transformations in the fifty-odd years since, with change accelerating especially after the economic liberalization reforms of 1991, and as such these studies are outdated and do not correspond to current ground realities.&lt;/p&gt;
+&lt;p&gt;The history of settlement in Pune closely corresponds to that of many other cities in India. Cities provided protection for their residents during times of distress and political instability. Thus they attracted upper-caste rural residents forming a very homogenous culture and identity. Increasingly these cities required labor, thus contributing to the migration of lower-caste groups to these cities. However, due to spatial segregation, these migrants had to live in the city outskirts. This pattern can be seen even today. Pune has grown in what can be called concentric rings through the decades. Even today, the inner old city core is dominated by upper-caste groups, surrounded by a diffused ring, corresponding to the 20th-century expansion of upper-caste residents with pockets of low-income lower-caste residents. (Mundhe and Jaybhaye 2014)&lt;/p&gt;
+&lt;p&gt;Due to such similarities, Pune can serve as a ‘guinea-pig’ of sorts to understand spatial inequality in urban India, and how it’s manifested through transportation infrastructure, municipal investment, and socio-economic factors such as employment, education, and health.&lt;/p&gt;
+&lt;p&gt;As such, we can examine these factors through the following broad categories and methods of understanding:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Socio-Economic Factors&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Literacy, Fertility, employment, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Municipal Investment&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Utilities, local roads &amp;amp; streets, governmental services centers, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Transit Development &amp;amp; Accessibility&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Availability of transit options, usability &amp;amp; functionality of transit options, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will elaborate on these factors in the following sections.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;datasets-we-are-using&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Datasets we are Using:&lt;/h2&gt;
+&lt;p&gt;For the above-mentioned factors, we will be using these datasets:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 2011 Primary Census Abstract for Pune City&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The decennial Indian census was first conducted in 1872, and regularly since 1881.
+It collects data on various indicators on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Household Level: Housing quality &amp;amp; material, number of rooms, ownership status&lt;/li&gt;
+&lt;li&gt;Individual Level: Age, gender, literacy, caste, economic activity, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The census also provides separate data for Scheduled Castes (SC) and Scheduled Tribes (ST).The Primary Census Abstract gives an overview of some variables at the Ward level, which will be used in this research.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Street Network Analysis Through OSMnx:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;OSMnx is a Python package used for downloading administrative boundaries and street networks from the OpenStreetMap. It also allows one to construct, project, visualize, and analyze complex street networks with NetworkX.&lt;/p&gt;
+&lt;p&gt;We feed OSMnx with the shapefile of our census-wards for Pune and get certain statistics for individual census-wards. These will be useful in comparing street network patterns across neighborhoods with varying socio-economic indicators. (Boeing 2017)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. PMPML Stops and Routes Dataset&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Pune Mahanagar Parivahan Mahamandal Limited (PMPML) is the public body entrusted with bus transit in the Pune and Pimpri-Chinchwad Metropolitan Region. It was formed in 2003 after the two separate bodies merged.&lt;/p&gt;
+&lt;p&gt;It maintains a fleet of 2045 buses servicing 2392 bus stops on 371 routes. The service suffers from mismanagement and an outdated and rigid administrative structure. However, it is still used by 18.8% of the city’s total road users and remains an important part of transportation service.&lt;/p&gt;
+&lt;p&gt;This dataset contains information on stops, their location, and routes servicing them, as well as whether they are part of the BRT (Bus Rapid Transit) System or not.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;socio-economic-factors&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Socio-Economic Factors&lt;/h2&gt;
+&lt;p&gt;A large part of the character of a citizenry can be understood by looking at socio-economic and health indices. These make us privy to quality of life indicators such as education levels, fertility rates, household sizes, sex ratio, and employment types.&lt;/p&gt;
+&lt;p&gt;Scheduled Castes and Scheduled Tribes are classifications made for administrative purposes, they group underprivileged communities for a wide variety of affirmative action programs and HDI improvement schemes. These groups are generally considered minorities and are such in Pune. It would be interesting to see how their proportions are manifested by census-wards in Pune.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/sumstats_tbl_scst_prop.jpg&#34; title=&#34;Summary Statistics of Census Wards by Their Proportion of SC&amp;amp;ST Residents&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We proceed to classify a ward as either majority dominant, or minority dominant. Here, we see that the median value of SC&amp;amp;ST proportion in a census-ward is 12.618%, and the Interquartile range is 12.259%. We take their total (24.877%) as a dividing line between majority dominant wards, (SC&amp;amp;ST proportion less than 24.877%) or minority dominant wards (SC&amp;amp;ST proportion more than 24.877%).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/scst_prop.jpg&#34; title=&#34;We see a ‘patchwork’ nature of social segregation, with pockets of minority-dominant areas, surrounded by majority-dominant areas.&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;literacy-rate&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Literacy Rate:&lt;/h3&gt;
+&lt;p&gt;Although universal access to education is guaranteed in the Indian Constitution, it is not always the case. As might be obvious, SC&amp;amp;STs have been historically denied access to education, and even today, their literacy rates remain well below that of dominant and privileged groups. We can view this to be evident from a scatterplot, by comparing a ward’s literacy rate with its proportion of minority population.&lt;/p&gt;
+&lt;p&gt;Here, we see a visible correlation between literacy rate and the proportion of SC&amp;amp;ST residents of a ward. The literacy rate also affects what kind of employment a person can get in their life, thus compounding problems related to employability, and skill development. The Primary Census Abstract also provides information on whether a person is employed full-time, or is marginally employed.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/literacy.jpg&#34; title=&#34;Comparing Literacy Rates with Demographics&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;marginal-employment&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Marginal Employment:&lt;/h3&gt;
+&lt;p&gt;A person with marginal employment has fewer chances of economic security, and social stability. Marginal workers are those employed for less than 6 months of the year. This results in a lower and less regular source of income. This could be ‘part-time work’, contractual daily-wage or intermittent manual labor. According to data from 2009, 87.8% of the SC&amp;amp;ST marginal worker population nationwide falls in the ‘Poor &amp;amp; Vulnerable’ category, whereas this count is only 54% for non-SC&amp;amp;ST. (Harriss-White and Prakash 2010) This shows that marginal work has a caste factor. We can also see how this correlates with the literacy rate in the above graph.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/marg_work.jpg&#34; title=&#34;Majority Dominant areas tend to have a smaller proportion of workers classified as &amp;#39;Marginal Workers&amp;#39; as opposed to Minority Dominant areas&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;With a difference in means t-test, we see that minority-dominant census-wards tend to have a larger proportion of workers employed in marginal work as compared to majority-dominant wards.
+With a p-value of 0.024, we see that the difference in means is statistically significant.&lt;/p&gt;
+&lt;p&gt;7 = minority dominant&lt;/p&gt;
+&lt;p&gt;5 = majority dominant&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;municipal-investment&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Municipal Investment&lt;/h2&gt;
+&lt;p&gt;Funding for municipal investment in public infrastructure comes from municipal wards through municipal level taxes, property taxes, and other cesses aimed at infrastructural development and maintenance. An interesting way to examine municipal investment is through road density. Disadvantaged areas in Pune tend to be informally settled with fewer municipal services. How road networks compare across various neighborhoods may throw light on whether this holds true or not.&lt;/p&gt;
+&lt;p&gt;We used the OSMnx package in Python to get details of the street network in each census-ward. The pattern of development closely follows the general population density. When we compare by the proportion of SC&amp;amp;ST residents, we do not see any visible correlation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/pop_dens.jpg&#34; title=&#34;We measure population density in two ways: First by area, and secondly by length of road&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Data in the above maps are classified by 5 quantiles. We see that the street length density and population density is comparable, with a few differences. Thus, we can say that three kinds of instances occur when comparing these two maps:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Equally Comparable:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Difference in ratios equal to 0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Population Density higher than Street Length Density&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Difference in ratios more than 0&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Population Density lower than Street Length Density&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The Difference in ratios less than 0&lt;/p&gt;
+&lt;p&gt;When we visualize this by comparing the normalized ratios of the two values, we get the following:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/dens_rat.jpg&#34; title=&#34;We get the density ratios between population density per area, and population density per km length of street, by normalizing their means&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Equally Comparable: (ratio = 0, grey)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can understand the ratio between population density and road density is equal, i.e. as one would expect it to be for a given ward in Pune of any density. Much of the western areas of the outer periphery is in this category, as areas just abutting the inner core.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Population Density higher than Street Length Density (ratio &amp;gt; 0, blues)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can understand this to mean that the ratio is imbalanced towards having more people than one would expect to be for a given ward in Pune of any density. This is most evident in the historic inner core, as well as certain pockets in the central peripheral areas.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Population Density lower than Street Length Density (ratio &amp;lt; 0, reds)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We can understand this to mean that the ratio is imbalanced towards having fewer people than one would expect for a given ward in Pune of any density. This can be observed largely in the eastern half of the city, as well as areas just to the north. This area houses the Agricultural College, as well as Koregaon Park – a low-density wealthy neighborhood with large single-family lots.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;transit-development-accessibility&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Transit Development &amp;amp; Accessibility&lt;/h2&gt;
+&lt;p&gt;Accessibility to transportation has long been considered to have an effect on quality of life indicators such as health, education, and income. (Syed, Gerber and Sharp 2014) Communities with limited access to roads and transportation options have limited ability to integrate with the outside world. (Kumar and Karvajal 2017) In urban areas, this often translates into residents of neighborhoods with underrepresented populations not having equitable access to the city’s transit system, thus making it difficult for them to access employment, schooling, and healthcare.&lt;/p&gt;
+&lt;p&gt;In dense transit-rich areas with a higher rate of transit dependence, commute is an important indicator of quality of life. Pune, however, has a low transit dependence at 18.8%, and private vehicle users (2 and 4 wheeled vehicles) account for 46.9% of road users.&lt;/p&gt;
+&lt;p&gt;Vehicle ownership is expensive in not only buying the vehicle but also maintaining it. The modal share of pedestrians can explain this: pedestrians account for 33.2% of all trips. (Parisar 2012-13) With a goal of increasing non-personal modes of transport to a combined total of 90% by 2040, we can assume that the Pune Mahanagar Parivahan Mahamandal Limited (PMPML) which looks after transit in the Greater Pune Area is looking to invest in transit.&lt;/p&gt;
+&lt;p&gt;The PMPML data includes information on the following key points:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Route ID –&lt;/strong&gt; the unique identifying number for a given route&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Stop ID –&lt;/strong&gt; the unique identifying number for a particular stop on a particular route. A particular stop name may feature multiple times in the dataset and will be associated with multiple stop IDs depending on how many routes it is covered in.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Stop Name –&lt;/strong&gt; Unique name for each stop. Is repeated as many times it is associated with a route.&lt;/p&gt;
+&lt;p&gt;*4. Latitude and Longitude –** Geographic coordinate points pair.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Interesting values we can derive from this could be:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Stop Density:&lt;/strong&gt; How many stops per ward, or population per stop for a given ward&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Stop Usability:&lt;/strong&gt; How many lines pass through a particular stop?&lt;/p&gt;
+&lt;p&gt;To understand these two values, we considered joining the PMPML dataset with the Census-Ward dataset. As such, we got two interesting values – Stops count per ward and the median count of bus lines passing through a bus stop in a given ward.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/pmpml_summstats.png&#34; title=&#34;Summary Statistics on the PMPML Infrastructure by Ward&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;When we compared the density of a census-ward with the median number of bus lines passing through its bus stands, we get the following result:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/transit_x_density.png&#34; title=&#34;Population Density of a Ward with the number of available bus lines&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;We see that most census-wards have a population density of fewer than 25,000 residents per square kilometer. They also seem to have less than 10 lines per stop. The census-ward with the highest density recorded also seems to have a lower median line count per stop at around 10. The ward with the highest median line count per stop seems to have a low to moderate density. This may be due to the reason that the ward (Satavwadi) is the location of Hadapsar Gadital – a bus terminal and depot. As such, it is not deviating from what one would expect.&lt;/p&gt;
+&lt;p&gt;One should note, that the absurdly high levels density values seen here are a distortion because of the small areas of the wards, as such, they may not ‘feel’ as dense as the numbers may seem to indicate.
+ 
+We map our two datasets: the PMPML points data, and the Census Polygon data, with the following variables:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. From PMPML: Lines through a Stop&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This will give us an idea of how ‘useful’ a particular stop is, how many lines can one take from that stop. This is a good indicator of how far one can go without needing to change to another line or vehicle.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. From the Census data: Proportion of SC&amp;amp;ST residents&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As discussed, we would like to see how bus stops are placed with regard to an area’s proportion of minority residents.&lt;/p&gt;
+&lt;p&gt;Even though the PMPML’s service area goes beyond the Pune Municipal Corporation (PMC) area limits, we are showing only the area under the PMC as this is the scope of our study.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/busnetwork_bylanddensity.png&#34; title=&#34;Bus Network laid on (left: Population Density per sqkm) and (right: Proportion of SC&amp;amp;ST Population)&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Stops in the central parts tend to have the most lines served. We also see key routes heavily serviced, with ‘frayed’ ends marked with smaller circles. This is indicative that many lines are similar for most of the journey, and only the last and first few stops are different. This is a very common and predictable pattern for a radial city.&lt;/p&gt;
+&lt;p&gt;We also see in the map on the right, the most heavily SC&amp;amp;ST proportioned wards do not have many well-serviced bus stops. The major corridor lines have a very low proportion of SC&amp;amp;ST residents.
+ 
+## Cross-comparing our data:&lt;/p&gt;
+&lt;p&gt;We have looked at each dataset individually, and compared each one to the other in some way to gain an understanding of how Pune works in the three ways we aimed to examine it:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. Socio-Economic Factors:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We understand the social layout of Pune and understood where there is a dominant population of majorities and minorities in the city. We also saw how economic activity is spread across the two social groups by comparing marginal low-output activities.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Municipal Investment:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We understood how the street network changes and is laid out in each census-ward. We also checked how the density of population and streets compares against each other. What areas have the expected density, and which do not (higher or lower).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Transit Infrastructure:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We see how the PMPML is spread across the city, and how areas are served, depending on the population, and density.&lt;/p&gt;
+&lt;p&gt;After seeing all these insights, we further check for observable correlations across these three datasets. As explained in the introduction, the groups classified as SC (Scheduled Caste) and ST (Scheduled Tribes) are among the most socially and economically disadvantaged in India. After looking through the data, and the study we conducted, the following indicators felt interesting to examine as predictors of a ward’s SC and ST proportion:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. The Proportion of Literate Residents:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is an important factor to consider. An illiterate person has fewer economic opportunities, and consequently lower spending power. In Pune, where only 18.8% of the population uses public transport, bus nearly 33% walk, we can guess that the cost of a bus ticket or pass may be prohibitively expensive for at least some of those who are exclusively pedestrian.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. Street Density:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Informal settlements, also called slums, tend to have fewer ‘legitimate’ roads, leading to poor quality access paths with insufficient asphalting, footpaths, or other street infrastructure. A disproportionate number of SC&amp;amp;ST citizens form the poorest sections of society and have a higher likelihood of residing in these settlements. As a result, this would be an interesting variable to consider.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. Population Density:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ideally, a denser area of the city would see a larger concentration of services as well. How this compares to other factors will be interesting to see.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. Number of Bus-stops:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A larger number of bus stops in an area gives a larger spread of areas a user/commuter can travel without needing to change lines/vehicles. This gives better access to larger parts of the city.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/ols_reg.jpg&#34; title=&#34;OLS Regression Results&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The p-value for stop count, street length per person, and proportion of literate persons is very low. This indicates that they are influential variables in determining a census-ward’s proportion of SC&amp;amp;ST residents. Initially, it may be surprising that population density is not an influential variable. One must remember that the core dense areas of the city have a significantly low proportion of SC&amp;amp;ST residents. As this regression is based only on data from Pune, we cannot with conviction apply it to other cities with a different socio-spatial structure.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/asa/correlation.png&#34; title=&#34;Correlation Matrix&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;The R-squared value of 0.454 is indicative that these factors explain 45.5% of the variance seen in the proportion of SC&amp;amp;ST residents in Pune.&lt;/p&gt;
+&lt;p&gt;When we do a correlation, we see a large negative correlation between proportion SC&amp;amp;ST and literacy rate.&lt;/p&gt;
+&lt;p&gt;Another interesting correlation is between street length per resident and the bus stop count per ward, in that they are positively correlated.&lt;/p&gt;
+&lt;p&gt;We also see that a higher stop-count is correlated with a lower population density. This seems counter-intuitive, but may be explained due to the smaller areas of denser wards.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;discussion&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Discussion:&lt;/h2&gt;
+&lt;p&gt;We started this study to understand how – if at all – one could understand socio-spatial inequality in Pune by examining socio-economic factors such as literacy and employment, transportation development such as transit infrastructure, and municipal investment such as street network development.&lt;/p&gt;
+&lt;p&gt;Our research shows that there indeed is a relationship between the above-mentioned factors. Some were expected correlations such as that of literacy rate and marginal employment. Some were unexpected results such as the relatively low influence of population density. Informal settlements are generally densely populated. However, this seems to be countered by historical factors – older areas in the city tend to be occupied by majoritarian upper-caste residents.&lt;/p&gt;
+&lt;p&gt;It confirms our understanding that caste, class, and social mobility are interrelated and highly complex issues. These results, however, should not be taken at face value. There are stronger, and potentially unquantifiable social relations that may have an influence of greater magnitude on caste-relations.&lt;/p&gt;
+&lt;p&gt;This research attempts to give only a small insight into this complex question. The increasing availability of regular high-resolution data will be a great contributor to understanding this problem in greater detail, especially over time. Changes in attitudes towards caste-based discrimination are slowly improving, however, the situation is still far from ideal. It will, therefore, be important to track how these attitudes manifest themselves in the above-quantified metrics – as well as others over time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;references&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;References:&lt;/h2&gt;
+&lt;p&gt;Boeing, Geoffrey. 2017. “OSMnx: New Methods for Acquiring, Constructing, Analyzing, and Visualizing Complex Street Networks.” Computers, Environment and Urban Systems, 126-139.&lt;/p&gt;
+&lt;ol start=&#34;2011&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Census. Indian Census Bureau.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Harriss-White, Barbara, and Aseem Prakash. 2010. Social Discrimination in India: A Case For Economic Citizenship. Discussion Paper, Oxfam India.&lt;/p&gt;
+&lt;p&gt;Kumar, Ashok, and Karla Gonzales Karvajal. 2017. “Providing road access to all: how India is turning a distant dream into reality.” World Bank. January 8. &lt;a href=&#34;http://blogs.worldbank.org/endpovertyinsouthasia/providing-road-access-all-how-india-turning-distant-dream-reality&#34; class=&#34;uri&#34;&gt;http://blogs.worldbank.org/endpovertyinsouthasia/providing-road-access-all-how-india-turning-distant-dream-reality&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Mehta, Surinder. 1969. “Patterns of Residence in Poona, India, by caste and religion: 1822-1965.” Demography.&lt;/p&gt;
+&lt;p&gt;Mundhe, Nitin N., and Ravindra G. Jaybhaye. 2014. “A Study of Urbanization in Pune District Using Geoinformatics Approach.” International Journal of Advance and Applied Research Vol. 2, Issue 1, September.&lt;/p&gt;
+&lt;p&gt;Parisar, SPTM. 2012-13. Transportation Status Report. Status Report, Pune: Parisar, SPTM.&lt;/p&gt;
+&lt;p&gt;Sarpotdar, Amish. 2017. Patterns of Residential Segregation and Spatial Inequality. Master’s Thesis, Hyderabad: Tata Institute of Social Sciences.&lt;/p&gt;
+&lt;p&gt;Satterthwaite, David. 2002. “The Ten and a Half Myths That May Distort the Urban Policies of Governments and International Agencies.” Paper, Toronto.&lt;/p&gt;
+&lt;p&gt;Syed, Samina, Ben Gerber, and Lisa Sharp. 2014. “Traveling Towards Disease: Transportation Barriers to Health Care Access.” J Community Health, Dec 13.&lt;/p&gt;
+&lt;p&gt;Wirth, Louis. 1938. “Urbanism as a Way of Life.” American Journal of Sociology, July: 1-24.&lt;/p&gt;
+&lt;p&gt;Zacharias, Ajit, and Vamsi Vakulabharanam. 2011. “Caste Stratification and Wealth Inequality in India.” World Development Vol. 39, Issue 10, October: 1820-1833.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The Role of Public Transportation in Somerville’s Urban Development</title>
+      <link>/project/bd4c/</link>
+      <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/project/bd4c/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Accessibility to transportation has long been considered to have an effect on quality of life indicators such as income, education and health levels. (Syed, Gerber and Sharp 2014) Today around the world, there are still many communities without access to all weather roads, thus limiting their residents’ ability to integrate more into the wider world. In urban areas this often translates into residents of neighborhoods with underrepresented populations not having equitable access to the city’s public transit system, thus making it difficult for them to have access to employment and schooling. (Kumar and Karvajal 2017)&lt;/p&gt;
+&lt;p&gt;In a transit rich area with a higher transit dependence commute is one of the key criteria for housing and employment choices. (Schaper 2018) This is even more evident today due to the post-20th century phenomenon of migration from suburbs towards denser urban areas which North American cities have been particularly prone to. The 20th century was dominated by wealthy suburbs and relatively poorer inner cores – none more so evident in North America. This trend has caused demand to surge, but housing stocks haven’t been able to keep pace with this demand.&lt;/p&gt;
+&lt;h3 id=&#34;hypothesis&#34;&gt;Hypothesis&lt;/h3&gt;
+&lt;p&gt;As such it was deemed necessary to see if there is any connection between this increased demand for housing and jobs and the availability of transit options. A better way to probably frame this would be:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Does the distance to or availability of public transport have any effect on investment and property prices in a city?&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;somervision&#34;&gt;SomerVision&lt;/h3&gt;
+&lt;p&gt;To be able to answer that, we can look at the city in consideration: Somerville, Massachusetts. Somerville is a city in the Greater Boston Area (GBA) with a population of around 80,000. Due to its location, it has long been a popular residential area for students attending MIT, Tufts, and Harvard among other educational institutions. This popularity has driven up real estate values and populations, thus prompting the city government to come up with a masterplan titled ‘Somervision’ to tackle existing and anticipated changes. (Acitelli 2012)&lt;/p&gt;
+&lt;p&gt;The core concerns outlined in the SomerVision masterplan document are:  (Mayor&amp;rsquo;s Office 2012)&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Increased Employment&lt;/li&gt;
+&lt;li&gt;Increase in accessible public space&lt;/li&gt;
+&lt;li&gt;New Affordable Housing&lt;/li&gt;
+&lt;li&gt;Higher and penetrative NMT and Public Transport Options&lt;/li&gt;
+&lt;li&gt;Higher growth in newer areas, and preserving traditional areas&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;From the point of our hypothesis, it would make more sense to consider point 4 - Higher and penetrative NMT and Public Transport Options. The Boston metropolitan area has a public transportation service provided by the MBTA (or the Massachusetts Bay Transportation Authority). Although the service is considerably robust, especially considering the car-dependent nature of most American cities, there are still some issues with last-mile connectivity – especially in the fringe areas.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;h3 id=&#34;datasets&#34;&gt;Datasets&lt;/h3&gt;
+&lt;p&gt;I used information from three different datasets:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a.	Building Permits Dataset:&lt;/strong&gt;
+This was the base dataset we worked with. It contained information on 26,222 entries through 28     variables, key among which for my analysis were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Permit Type,&lt;/li&gt;
+&lt;li&gt;Address,&lt;/li&gt;
+&lt;li&gt;Total Permit Fees,&lt;/li&gt;
+&lt;li&gt;Date applied and date Approved&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;b.	Tax Assessor’s Dataset:&lt;/strong&gt;
+This dataset was used to get information on not just the land parcels which applied for a permit, but also for those which did not. It contained information on 33,490 entries through 37 variables, key among which for my analysis were:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Total Value of Parcel&lt;/li&gt;
+&lt;li&gt;Site Address&lt;/li&gt;
+&lt;li&gt;Zoning&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These two datasets were joined using a variable called LOC_ID which was a unique ID for every parcel.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;c.	MBTA Bus Dataset:&lt;/strong&gt;
+The MBA bus dataset was derived from the shapefile received from MassGIS – a repository of shapefiles related to Massachusetts. This contained data on all Bus stops across the MBTA network of eastern Massachusetts. I subset it to get only those stops which are in Somerville and within a buffer of 1 kilometer from its borders.&lt;/p&gt;
+&lt;h3 id=&#34;nearest-bus-stop-variable&#34;&gt;Nearest Bus Stop Variable&lt;/h3&gt;
+&lt;p&gt;The main variable on which the study is based is the nearest bus stop variable. By combining the tax assessor’s data with the building permits data, we got the master list of land-parcels. The &lt;code&gt;pointDistance()&lt;/code&gt; function from the RASTER package in R was used:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;To find the distance between all land parcels and all bus stops&lt;/li&gt;
+&lt;li&gt;Then the &lt;code&gt;apply()&lt;/code&gt; function was used to find the minimum distance for each land parcel and bus stops&lt;/li&gt;
+&lt;li&gt;This process was repeated to get a list of bus stops unique to each parcel which were the closest to it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Thus, we get our main variable on which a large part of this study is based.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;h3 id=&#34;distance-analysis&#34;&gt;Distance Analysis&lt;/h3&gt;
+&lt;p&gt;The primary variable we constructed (The distance to the nearest bus stop) resulted in the following map:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-public-transport-accessibility-map---distance-to-the-nearest-bus-stand&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/project/bd4c/somerville_distmap.jpg&#34; data-caption=&#34;Public Transport Accessibility Map - Distance to the nearest bus stand&#34;&gt;
+
+
+  &lt;img src=&#34;/img/project/bd4c/somerville_distmap.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Public Transport Accessibility Map - Distance to the nearest bus stand
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;This map reveals a few things. The vast majority of bus stops (in black) are along east-west corridors. As such, we do not observe any north-south routes except for two near Union Square. Also visible are two areas where a large number of parcels are further away (more than 400m
+away) from their closest bus stand. Although it is tempting to confirm that these are the areas requiring immediate attention, one must note that this distance analysis has one drawback:&lt;/p&gt;
+&lt;p&gt;It is the distance as-the-crow-flies and does not take into account the actual path – which in the case of cities in the Boston area may not always be cardinal and straight. A few more factors to consider when looking at accessibility, which is a limiting feature in this study are road gradients, user profile (age/disability), climate/weather conditions, lighting conditions at night, footpath availability and quality etc.. This by no means is an exhaustive list, and differences due to local conditions can change.&lt;/p&gt;
+&lt;p&gt;As seen from the map, even though there are some outliers, the vast majority of parcels in Somerville are well within the 400m ideal maximum. This maximum considers the average distance a person can walk in 7 minutes. (El-Geneidy, et al. 2014)&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-density-plot-of-distances-to-nearest-bus-stop-with-the-mean-value-for-somerville-12974-m-and-ideal-maximum-400-m-marked&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/project/bd4c/somerville_distdensity.jpg&#34; data-caption=&#34;Density plot of Distances to Nearest Bus Stop with the mean value for Somerville (129.74 m) and ideal maximum (400 m) marked&#34;&gt;
+
+
+  &lt;img src=&#34;/img/project/bd4c/somerville_distdensity.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Density plot of Distances to Nearest Bus Stop with the mean value for Somerville (129.74 m) and ideal maximum (400 m) marked
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;distribution-across-somerville&#34;&gt;Distribution Across Somerville&lt;/h3&gt;
+&lt;p&gt;This distribution manifests itself in a varied fashion when applied to different areas of Somerville, and also across land use.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Land Use:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We see a definite divide between land parcels with commercial activity (commercial, mixed-use, TOD) and those without (residential, special – meaning Tufts University and parkland, and industrial areas)&lt;/p&gt;
+&lt;p&gt;This goes with the idea of having commercial activity near transit nodes. The question here is what influences what, if at all?&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-distances-across-different-land-uses-in-somerville&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/project/bd4c/dist_boxplot.jpg&#34; data-caption=&#34;Distances across different land uses in Somerville&#34;&gt;
+
+
+  &lt;img src=&#34;/img/project/bd4c/dist_boxplot.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Distances across different land uses in Somerville
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/project/bd4c/dist_table.jpg&#34; &gt;
+
+
+  &lt;img src=&#34;/img/project/bd4c/dist_table.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;census-tract&#34;&gt;Census Tract:&lt;/h3&gt;
+&lt;p&gt;When we compare the distances by census tract, it is quite evident that there are many census tracts which deviate from the city-wide mean. The two most notable being Census tract 3506 and Census Tract 3512.03:&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-distances-across-different-census-tracts-in-somerville&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/project/bd4c/census_tract_boxplot.jpg&#34; data-caption=&#34;Distances across different Census Tracts in Somerville&#34;&gt;
+
+
+  &lt;img src=&#34;/img/project/bd4c/census_tract_boxplot.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Distances across different Census Tracts in Somerville
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;When comparing these two census tracts with Somerville as a whole and divided by Census Tract, we see a very large variation. This analysis also shows the importance of the geographic unit of analysis. Here I feel the census tract fits perfectly because:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a. Number of units:&lt;/strong&gt; 18 census tracts in Somerville makes it easier to compare
+&lt;strong&gt;b. Size:&lt;/strong&gt; averaging around 4000 people each, there is enough variation within them to offset most extremes
+&lt;strong&gt;c. Similarity:&lt;/strong&gt; Census tracts are generally drawn with similar characteristics, thus making comparisons between them easier to analyze.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/project/bd4c/landuse_dist_table.jpg&#34; &gt;
+
+
+  &lt;img src=&#34;/img/project/bd4c/landuse_dist_table.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;addressing-our-hypothesis&#34;&gt;Addressing our Hypothesis&lt;/h2&gt;
+&lt;p&gt;Developing on the relationship between public transport availability and land use, and based on the knowledge of the Boston metropolitan area being a high desirability area, we can therefore relook at our hypothesis:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Does distance to or availability of public transport have any effect on investment and property prices in a city?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;To carry out this study, I considered the following three variables:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;a.	Minimum Distance to Stop:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is the distance to the closest bus stop for any given parcel
+This addresses the first component of our research question:
+&lt;em&gt;distance to or availability of public transport&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;b.	Total Permit Fees:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is the value of the permit application fee for each permit aggregated by parcel ID so we get the total value of all permit applications for each land parcel
+This addresses the second part of our research question:
+&lt;em&gt;Investment&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;c.	Total Value:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This variable is the total amount of the land and building values for any given parcel of land.
+This addresses the third component of our research question:
+&lt;em&gt;Property prices&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;regressions&#34;&gt;Regressions:&lt;/h3&gt;
+&lt;p&gt;To find if there is any correlation, and if any, what the effect might be on each other, we carried out two regressions:&lt;/p&gt;
+&lt;p&gt;a.	On permit fees
+b.	On land value&lt;/p&gt;
+&lt;h3 id=&#34;in-r&#34;&gt;In R:&lt;/h3&gt;
+&lt;p&gt;We used the lm() function to carry out the bivariate regressions, and then used the &lt;code&gt;summary()&lt;/code&gt; function to get the results.&lt;/p&gt;
+&lt;h2 id=&#34;results-1&#34;&gt;Results&lt;/h2&gt;
+&lt;h3 id=&#34;investment&#34;&gt;Investment&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-regression-results-a-loss-of-around-033-us-dollars-per-meter-away-from-a-bus-stop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/project/bd4c/investments_regression.jpg&#34; data-caption=&#34;Regression Results: a loss of around 0.33 US dollars per meter away from a bus stop&#34;&gt;
+
+
+  &lt;img src=&#34;/img/project/bd4c/investments_regression.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Regression Results: a loss of around 0.33 US dollars per meter away from a bus stop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;land-value&#34;&gt;Land Value&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-regression-results-a-loss-of-around-642-us-dollars-per-meter-away-from-a-bus-stop&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/project/bd4c/landval_regression.jpg&#34; data-caption=&#34;Regression Results: a loss of around 642 US dollars per meter away from a bus stop&#34;&gt;
+
+
+  &lt;img src=&#34;/img/project/bd4c/landval_regression.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Regression Results: a loss of around 642 US dollars per meter away from a bus stop
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;interpretation&#34;&gt;Interpretation:&lt;/h3&gt;
+&lt;p&gt;Both regressions show weak and negative influences of distance to bus stop on the dependent variables. Investment value increased by around 33 cents for every meter the property was closer to a bus stop. Similarly, for land value, we see that there is an increase of around 642 dollars (in total land value, not per unit area) for every meter the property is closer to a bus stop.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-land-value-by-land-use&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;/img/project/bd4c/landval__regression_by_landuse.jpg&#34; data-caption=&#34;Land Value by Land Use&#34;&gt;
+
+
+  &lt;img src=&#34;/img/project/bd4c/landval__regression_by_landuse.jpg&#34; alt=&#34;&#34;  &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Land Value by Land Use
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;However, it may be recalled that properties with a commercial component (Commercial/TOD/Mixed Use) tend to be closer to a bus stop. The regression results above also show that property values are higher if a property is commercial as opposed to a residential property, and as such we cannot rule out these influences either.&lt;/p&gt;
+&lt;h2 id=&#34;discussion&#34;&gt;Discussion&lt;/h2&gt;
+&lt;p&gt;Although our analysis shows very weak relationships between access to transit and investment &amp;amp; land value, there are other studies which have looked at this same phenomenon. One notable study is from the Dukakis Center for Urban and Regional Policy titled ‘Maintaining Diversity in America’s Transit-Rich Neighborhoods: Tools for Equitable Neighborhood Change’ by Pollock, Stephanie et al. (Pollock, Bluestone and Billingham 2010) talks about the importance of cultural (ethnic/racial) diversity of a neighborhood and how it is affected by desirability to live near transit. It looks at demographic groups – most notably historically repressed racial minorities who have been displaced due to high rentals and living costs arising out of the desire of wealthier aspirants wishing to live in transit rich areas – which were the areas occupied by the former people group for most of the twentieth century.&lt;/p&gt;
+&lt;p&gt;The extent of this study is not to provide a solution for the housing crisis or gentrification as a whole: There may be a need for institutional and cultural changes on how we view home ownership as an investment. (Hertz 2016)&lt;/p&gt;
+&lt;p&gt;This study aims to provide the city of Somerville with:&lt;/p&gt;
+&lt;p&gt;a.	A broad understanding of their current state of public transportation; 
+b.	What and where the scope is for improvement and investments in infrastructure;
+c.	How land use zoning could follow the aspirations of citizens evident in the pattern of permit applications as seen in this study.&lt;/p&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Acitelli, Tom. 2012.&lt;/strong&gt; &amp;ldquo;SomerVision Sees 6,000 New Homes, Lots of Green Line Riders.&amp;rdquo; &lt;em&gt;Curbed.&lt;/em&gt; Curbed. May 30. &lt;a href=&#34;https://boston.curbed.com/2012/5/30/10367004/there-are-many-juicy-morsels&#34;&gt;https://boston.curbed.com/2012/5/30/10367004/there-are-many-juicy-morsels&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;El-Geneidy, A, M Grimsrud, R Wasfi, P Tétreault, and J &amp;amp; Surprenant-Legault. 2014.&lt;/strong&gt; &lt;em&gt;New evidence on walking distances to transit stops: Identifying redundancies.&lt;/em&gt; Transportation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hertz, Daniel. 2016.&lt;/strong&gt; &amp;ldquo;Housing can’t be a good investment and affordable.&amp;rdquo; &lt;em&gt;City Observatory.&lt;/em&gt; July 20. &lt;a href=&#34;http://cityobservatory.org/housing-cant-be-a-good-investment-and-affordable/&#34;&gt;http://cityobservatory.org/housing-cant-be-a-good-investment-and-affordable/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kumar, Ashok, and Karla Gonzales Karvajal. 2017.&lt;/strong&gt; &amp;ldquo;Providing road access to all: how India is turning a distant dream into reality.&amp;rdquo; &lt;em&gt;World Bank.&lt;/em&gt; January 8. &lt;a href=&#34;http://blogs.worldbank.org/endpovertyinsouthasia/providing-road-access-all-how-india-turning-distant-dream-reality&#34;&gt;http://blogs.worldbank.org/endpovertyinsouthasia/providing-road-access-all-how-india-turning-distant-dream-reality&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mayor&amp;rsquo;s Office, Somerville. 2012.&lt;/strong&gt; &amp;ldquo;SomerVision.&amp;rdquo; &lt;em&gt;Somerville: Somerville City Government.&lt;/em&gt; &lt;a href=&#34;https://www.somervillema.gov/sites/default/files/somervision-comprehensive-plan.pdf&#34;&gt;https://www.somervillema.gov/sites/default/files/somervision-comprehensive-plan.pdf&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pollock, Stephanie, Barry Bluestone, and Chase Billingham. 2010.&lt;/strong&gt; &lt;em&gt;Maintaining Diversity in America’s Transit-Rich Neighborhoods: Tools for Equitable Neighborhood Change.&lt;/em&gt; Boston: Dukakis Center for Urban and Regional Policy, Northeastern University.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Schaper, David. 2018.&lt;/strong&gt; &amp;ldquo;&amp;lsquo;Talent Wants Transit&amp;rsquo;: Companies Near Transportation Gaining The Upper Hand.&amp;rdquo; &lt;em&gt;National Public Radio.&lt;/em&gt; November 29. &lt;a href=&#34;https://www.npr.org/2018/11/29/671203167/talent-wants-transit-companies-near-transportation-gaining-the-upper-hand?fbclid=IwAR2hac65WWiaBF95s6yyY3bzDoG-lKo5lhWlww5_k4gqyNRWXCAvC3cHyF4&#34;&gt;https://www.npr.org/2018/11/29/671203167/talent-wants-transit-companies-near-transportation-gaining-the-upper-hand?fbclid=IwAR2hac65WWiaBF95s6yyY3bzDoG-lKo5lhWlww5_k4gqyNRWXCAvC3cHyF4&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Syed, Samina, Ben Gerber, and Lisa Sharp. 2014.&lt;/strong&gt; &amp;ldquo;Traveling Towards Disease: Transportation Barriers to Health Care Access.&amp;rdquo; &lt;em&gt;J Community Health,&lt;/em&gt; Dec 13.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Undergraduate Design Portfolio</title>
+      <link>/project/thesis/</link>
+      <pubDate>Thu, 13 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>/project/thesis/</guid>
+      <description>
+
+
+&lt;p&gt;The Undergraduate Portfolio contains curated design documentation of three key projects completed between 2014 and 2016. All three projects contain elements relevant to the study of urban space, and the human interactions that create these spaces.&lt;/p&gt;
+&lt;p&gt;Please click on the &lt;em&gt;slides&lt;/em&gt; button above or &lt;a href=&#34;/slides/archi_portfolio/#/&#34;&gt;here&lt;/a&gt; to see the portfolio pages.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Civic Institutions as Catalysts for Urban Rejuvenation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Thesis | Year 5 Semester 2&lt;/p&gt;
+&lt;p&gt;The project eveolved out of a need to establish cultural institutions while simultaneously addressing issues of urban decay and irregular land utilisation. The development of an active public space was acheived through design interventions which are human in scale
+and proportion.&lt;/p&gt;
+&lt;p&gt;There was a need therefore for the development of an active public space which could complement the existing pedestrian plaza of MG Marg for urban rejuvenation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sakaalnagar - Residential Redevelopment &amp;amp; Upgradation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Mass Housing | Year 4 Semester 1&lt;/p&gt;
+&lt;p&gt;Sakaalnagar is a 30 year old housing complex in Pune built when construction materials available were of poor quality. A proposal to redevelop it was finalized in 2013, and our studio took it up as an academic project.&lt;/p&gt;
+&lt;p&gt;The design philosophy stems from Eyes on the Streets, and Liveable Neighbourhoods concepts aiming to reduce social distances and increase social cohesion and the idea of shared security.&lt;/p&gt;
+&lt;p&gt;Separate pedestrian and vehicular corridors ensures the safety of residents, playing children and the vulnerable.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Questioning Urban Paradigms - Studying the Changing Face of Tulshibaug&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Research Dissertation | Year 4 Semester 2&lt;/p&gt;
+&lt;p&gt;This research aims at understanding the reason for the development of the urban areas of Tulshibaug and Mandai. The architecture and urban patterns of a particular era are a reflection of the social, cultural, economic and political situation prevalent at that time. This has often resulted in an entire city’s character being changed or even the cultural attitudes of its people.&lt;/p&gt;
+&lt;p&gt;The purpose of this study is to understand the reasons for this situation, both historical and current.&lt;/p&gt;
+&lt;p&gt;It aims at evolving certain design andd policy solutions to improve the present day situation by understanding the needs of all stakeholders including but not limited to shoppers, tourists, worshippers, shopkeepers, and residents.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

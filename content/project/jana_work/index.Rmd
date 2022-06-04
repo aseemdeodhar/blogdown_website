@@ -1,0 +1,40 @@
+---
+date: "2018-12-13T00:00:00Z"
+external_link: ""
+image:
+  caption: Graphic of the Wholesale Flower Section of KR Market, Bangalore, India
+  focal_point: Smart
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/aseemvd
+slides: jana
+summary: A Portfolio of Professional Architecture and Urban Design Work
+tags:
+- Architecture and Urban Design
+- Professional
+- Transit and Transportation
+- JanaUSP
+title: Professional Design Portfolio
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+The Professional Design Portfolio contains curated design documentation of two major projects completed between 2016 and 2018. Both projects contain elements relevant to the study of urban space, and the human interactions that create these spaces.
+
+Please click on the *slides* button above or [here](/slides/jana/#/) to see the portfolio pages.
+
+**Specifications for Urban Roads Execution Phases 1 & 3**
+
+Tender S.U.R.E. | Jana USP | 2016 - present
+
+Tender S.U.R.E. are the first set of guidelines in India concieved by Jana Urban Space Foundation for urban road design redevelopment and procurement for execution. The Tender S.U.R.E. standards aim in making the road more durable, ease pedestrian movement, ensure free flow of traffic and avoid unnecessary road cuttings by various utility agencies.
+
+**Upgradation and Redevelopment of A Historic Economic Centre**
+
+Krishna Rajendra Market | Jana USP | 2017 - present
+
+KR (Krishna Rajendra) Market in Bangalore is a historic public market dating back to the early 1920s. Since then it has transformed from a small neighborhood market to the largest supplier of fruits, vegetables, meat, and other sundry items to Bangalore; a city of 11 million people and growing. Although KR Market is the largest market in the city in terms of volume and value of commodities exchanged, it faces a number of issues that deter it from living up to its full potential. Today it is noted as a major flower market as well as an iconic Bangalorean institution.

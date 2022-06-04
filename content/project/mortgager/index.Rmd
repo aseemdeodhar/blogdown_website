@@ -1,0 +1,109 @@
+---
+date: "2021-01-20T00:00:00Z"
+external_link: ""
+image:
+  caption: Mortgage Calculator Formula
+  focal_point: Smart
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/aseemvd
+- icon: github
+  icon_pack: fab
+  name: Github
+  url: https://github.com/aseemdeodhar/mortgager
+summary: Homeownership Costs Calculator - Attainable Housing in Massachusetts
+tags:
+- Spatial Analysis
+- Professional
+- MAPC
+title: mortgager - R Package 
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+# {mortgager}
+
+This package was developed to calculate homeownership costs for MassHousing's [Commonwealth Builder Program](https://www.masshousing.com/en/developers/commonwealth-builder). This package was used to analyse a proprietary dataset of home sale records from 2010 to 2020 in Massachusetts to determine the affordability of existing and historic sales.
+
+## Formula
+
+The formula used for calculating monthly home-ownership payment amounts is based on a widely accepted monthly mortgage formula, which here is adapted from that seen on the [Nerdwallet website](https://www.nerdwallet.com/mortgages/mortgage-calculator/calculate-mortgage-payment).
+
+
+![](/img/project/mortgager/formula.png)
+
+**Where:**
+
+* **M** = Monthly mortgage amount
+* **P** = Principal amount, ie total loan amount
+* **i** = Monthly mortgage interest rate
+* **n** = Number of payments across loan duration. (This is generally assumed to be number of months. For example, a loan with a payback period of 30 years, will have 360 payments in total)
+
+In addition to the monthly mortgage payment, there are other costs associated with home-ownership which are then added to calculate total home-ownership costs, namely:
+
+
+* **PMI factor** – only for loans with a downpayment less than 20%, assumed at 7.5% annually on the mortgage amount
+* **Home-owners** insurance – assumed at $1000 annually
+* **Condo fees** – applicable only to condominium sales, assumed at $1000 annually
+* **Property Tax** - an annual percentage amount taxed on assessed property value dependent on the jurisdiction the unit is located in.
+
+## Installation
+
+You can install the released version of mortgager with:
+
+``` r
+devtools::install_github("aseemdeodhar/mortgager")
+```
+
+## {mortgager}
+
+Load the \code{mortgager} package with this line:
+
+```{r example}
+library(mortgager)
+```
+
+## Examples for each function:
+
+### mortgager::monthlypayment()
+
+\code{monthlypayment} calculates monthly home-ownership costs based on tax rates, interest rates, downpayment rate, and home cost price.
+
+```{r}
+monthlypayment(mortgage_rate = 3,
+               property_tax = 12,
+               downpayment_rate = .2,
+               home_price = 450000)
+```
+
+### mortgager::max_homeprice()
+
+\code{max_homeprice} calculates maximum affordable home price based on annual income with a set monthly housing cost percentage (default is 30%).
+
+```{r}
+max_homeprice(annualinc = c(61000, 75000, 22330, 120000),
+              mortgage_rate = 2.7,
+              property_tax = 6)
+```
+
+### mortgager::downpayment_amt()
+
+\code{downpayment_amt} calculates the total downpayment amount based on sale price and downpayment rate
+
+```{r}
+downpayment_amt(home_price = 250000,
+                downpayment_rate = 0.10)
+```
+
+### mortgager::reqd_income()
+
+\code{reqd_income} calculates the minimum annual income required for total housing costs to remain at or below a set proportion of household income.
+
+```{r}
+reqd_income(monthlypayment = 2000,
+            housing_cost_rate = 0.30)
+```

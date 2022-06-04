@@ -1,0 +1,90 @@
+---
+date: "2020-09-14T00:00:00Z"
+external_link: ""
+image:
+  caption: Land use diversity by each one mile radius zone in Boston
+  focal_point: Smart
+links:
+- icon: twitter
+  icon_pack: fab
+  name: Follow
+  url: https://twitter.com/aseemvd
+- icon: github
+  icon_pack: fab
+  name: Github
+  url: https://github.com/aseemdeodhar/BostonSidewalks/tree/master/15_min_city
+slides: sidewalks
+summary: How can we transform Boston into a '15 Minute' city?
+tags:
+- Spatial Analysis
+- Transit and Transportation
+- Academic
+- Personal Work
+- ARGO
+title: Fifteen Minute Boston - Walk, Bike, Transit
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+## 15-minute Boston
+
+Paris, under their mayor Anne Hidalgo is working to completely transform how people move around their city by introducing [the ’15-minute’ city](https://www.citylab.com/environment/2020/02/paris-election-anne-hidalgo-city-planning-walks-stores-parks/606325/), where all aspects of a person’s life are achievable within a 15-minute walk, bike, or transit ride from their residence.
+
+A project of this scale and magnitude will be required to be staged and completed in phases. If we consider the city of Boston, Massachusetts, how can we adapt this ’15-minute’ city plan here, taking into account its unique strengths, weaknesses, opportunities, and challenges? 
+
+Understandably, Boston's current configuration does not allow for such a situation. Furthermore, a 15 minute walk is significantly shorter than a 15 minute bike ride, and depending on the mode, public transit will take you further than a bike in 15 minutes.
+
+In what ways would Boston's land-use configuration have to change, to accomodate these requirements? Does it really make sense to concentrate all businesses in one centralized 'downtown' area or Financial District?
+
+**Analysis**
+
+* Can we use POI data to evaluate the accessibility of various 15-minute regions based on population and car ownership? 
+* [Can we create accessibility maps](https://towardsdatascience.com/measuring-pedestrian-accessibility-97900f9e4d56) that allow Paris and other cities identify which areas require more amenities to make it eligible under a 15-minute accessible region?
+
+### 15 Minute Walk Zones
+
+By generating hexagonal tesselations of side equal to 1 mile (the generally accepted distance an average person can walk in 15 minutes) we divide the City of Boston into zones equalling a 1 mile radius. Since the radius of 1 mile is equal to the side of the hexagon, the circumscribed radius is also equal to 1 mile. This effectively creates (for each 1-mile hexagon) up to 6 overlapping zones with neighboring hexagons.
+
+1 mile radius hexagons | 1 mile radius overlapping circles
+:--:|:--:
+![](/img/project/sidewalks/15_min_walk.png) | ![](/img/project/sidewalks/15_min_walk_circles.png)
+
+Working with the existing urban layout and physical infrastructure, how do we ensure that all the above mentioned services can be made available within this 1-mile zone?
+We mapped these two layers together: by getting the proportion of land covered under each major use type, how does each zone compare to the city-wide average?
+
+```{r, eval=FALSE}
+bos_zones_ratio <- bos_zones %>% 
+                    select(SUBDISTRIC, area_sqm) %>% 
+                    group_by(SUBDISTRIC) %>% 
+                    summarise(area_sqm = sum(area_sqm))
+
+bos_zones_ratio$landuseratio <- (bos_zones_ratio$area_sqm/sum(bos_zones_ratio$area_sqm))*100
+
+bos_15minzones_ratio <- bos_15minzones %>% 
+  select(TARGET_FID, SUBDISTRIC, area_sqm) %>% 
+  group_by(TARGET_FID, SUBDISTRIC) %>% 
+  summarise(area_sqm = sum(area_sqm)) %>% 
+  mutate(landuseratio = (area_sqm/sum(area_sqm))*100)
+```
+
+
+Land Use for Boston City | Land use proportions
+:--:|:--------------------:
+![](/img/project/sidewalks/15_min_landuse.png)| ![](/img/project/sidewalks/15_min_landuse_tableau.png) [_see data on Tableau Public_](https://public.tableau.com/profile/aseem.deodhar#!/vizhome/LandUseDiversityinBoston/Dashboard1)
+
+What policy, design and planning changes can be made to transform each zone into a self-sustaining 15-minute walk zone?
+
+**Narrative**
+* Who and where will interventions make the most difference? 
+* How can we avoid falling into the systematic bias created by 20 th century urban planning?
+* How can we create a general purpose analysis to evaluate 15-minute accessibility for any city?
+
+## Pedestrianizing the South End:
+
+Boston's South End creates a strong case for a carfree neighborhood: dense and surrounded by multiple high frequency transit options, it is interestingly placed as a residential neighborhood within the city.
+
+With no residential unit more than 300 meters away from either a MBTAbus, Green line, or Orange line station, the area also has a low car dependency. The area is bound by Mass Ave, Huntington Ave, and Washington St. With Dartmouth St, Newton St, Tremont St, and Columbus Ave dividing the neighborhood into 8 blocks. Converted to alternating one-ways, (with bidirectional bike lanes and bus lanes where required)
+
+![](/img/project/15_min_boston/ped_southend-01.png)

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ARGO | Aseem Deodhar</title>
+    <link>/tag/argo/</link>
+      <atom:link href="/tag/argo/index.xml" rel="self" type="application/rss+xml" />
+    <description>ARGO</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Aseem Deodhar © 2021</copyright><lastBuildDate>Tue, 13 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/static/img/avatar.jpg</url>
+      <title>ARGO</title>
+      <link>/tag/argo/</link>
+    </image>
+    
+    <item>
+      <title>Covid-19&#39;s Effect on Community Vulnerability</title>
+      <link>/project/ma_unemployment/</link>
+      <pubDate>Tue, 13 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/project/ma_unemployment/</guid>
+      <description>
+
+
+&lt;p&gt;The Covid-19 crisis has exposed the weak hidden foundations upon which our ‘prosperous’ society was built, and exacerbated visible ones. The most visible of these factors is the sudden jump in unemployment over the summer. This project aims to develop a ‘Community Vulnerability Index’ to understand the devastating effects the health and economic crisis brought on by the Covid-19 pandemic. It aims to identify communities in Massachusetts most affected by heightened unemployment during the summer for targeted relief and developmental assistance.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Slide&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Comments&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/ma_unemployment/final_presentation_1.png&#34; alt=&#34;Project Cover&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Project Cover&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/ma_unemployment/final_presentation_2.png&#34; alt=&#34;Data Sources and Index Development&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Data Sources and Index Development&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/ma_unemployment/final_presentation_3.png&#34; alt=&#34;Summer Unemployment Rates&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Summer Unemployment Rates&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/ma_unemployment/final_presentation_4.png&#34; alt=&#34;R Code Development&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;R Code Development&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/ma_unemployment/final_presentation_5.png&#34; alt=&#34;R Code Development&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;R Code Development&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/ma_unemployment/final_presentation_6.png&#34; alt=&#34;Index Mapped&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Index Mapped&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/ma_unemployment/final_presentation_7.png&#34; alt=&#34;Top 10 Worst Hit&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Top 10 Worst Hit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/ma_unemployment/final_presentation_8.png&#34; alt=&#34;Top 10 Least Hit&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Top 10 Least Hit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/ma_unemployment/final_presentation_9.png&#34; alt=&#34;Detailed Factor Analysis&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Detailed Factor Analysis&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/ma_unemployment/final_presentation_10.png&#34; alt=&#34;Policy Recommendations&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Policy Recommendations&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fifteen Minute Boston - Walk, Bike, Transit</title>
+      <link>/project/15_min_boston/</link>
+      <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
+      <guid>/project/15_min_boston/</guid>
+      <description>
+
+
+&lt;div id=&#34;minute-boston&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;15-minute Boston&lt;/h2&gt;
+&lt;p&gt;Paris, under their mayor Anne Hidalgo is working to completely transform how people move around their city by introducing &lt;a href=&#34;https://www.citylab.com/environment/2020/02/paris-election-anne-hidalgo-city-planning-walks-stores-parks/606325/&#34;&gt;the ’15-minute’ city&lt;/a&gt;, where all aspects of a person’s life are achievable within a 15-minute walk, bike, or transit ride from their residence.&lt;/p&gt;
+&lt;p&gt;A project of this scale and magnitude will be required to be staged and completed in phases. If we consider the city of Boston, Massachusetts, how can we adapt this ’15-minute’ city plan here, taking into account its unique strengths, weaknesses, opportunities, and challenges?&lt;/p&gt;
+&lt;p&gt;Understandably, Boston’s current configuration does not allow for such a situation. Furthermore, a 15 minute walk is significantly shorter than a 15 minute bike ride, and depending on the mode, public transit will take you further than a bike in 15 minutes.&lt;/p&gt;
+&lt;p&gt;In what ways would Boston’s land-use configuration have to change, to accomodate these requirements? Does it really make sense to concentrate all businesses in one centralized ‘downtown’ area or Financial District?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can we use POI data to evaluate the accessibility of various 15-minute regions based on population and car ownership?&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/measuring-pedestrian-accessibility-97900f9e4d56&#34;&gt;Can we create accessibility maps&lt;/a&gt; that allow Paris and other cities identify which areas require more amenities to make it eligible under a 15-minute accessible region?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;minute-walk-zones&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;15 Minute Walk Zones&lt;/h3&gt;
+&lt;p&gt;By generating hexagonal tesselations of side equal to 1 mile (the generally accepted distance an average person can walk in 15 minutes) we divide the City of Boston into zones equalling a 1 mile radius. Since the radius of 1 mile is equal to the side of the hexagon, the circumscribed radius is also equal to 1 mile. This effectively creates (for each 1-mile hexagon) up to 6 overlapping zones with neighboring hexagons.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;1 mile radius hexagons&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;1 mile radius overlapping circles&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_walk.png&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_walk_circles.png&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Working with the existing urban layout and physical infrastructure, how do we ensure that all the above mentioned services can be made available within this 1-mile zone?
+We mapped these two layers together: by getting the proportion of land covered under each major use type, how does each zone compare to the city-wide average?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bos_zones_ratio &amp;lt;- bos_zones %&amp;gt;% 
+                    select(SUBDISTRIC, area_sqm) %&amp;gt;% 
+                    group_by(SUBDISTRIC) %&amp;gt;% 
+                    summarise(area_sqm = sum(area_sqm))
+
+bos_zones_ratio$landuseratio &amp;lt;- (bos_zones_ratio$area_sqm/sum(bos_zones_ratio$area_sqm))*100
+
+bos_15minzones_ratio &amp;lt;- bos_15minzones %&amp;gt;% 
+  select(TARGET_FID, SUBDISTRIC, area_sqm) %&amp;gt;% 
+  group_by(TARGET_FID, SUBDISTRIC) %&amp;gt;% 
+  summarise(area_sqm = sum(area_sqm)) %&amp;gt;% 
+  mutate(landuseratio = (area_sqm/sum(area_sqm))*100)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Land Use for Boston City&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Land use proportions&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_landuse.png&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_landuse_tableau.png&#34; /&gt; &lt;a href=&#34;https://public.tableau.com/profile/aseem.deodhar#!/vizhome/LandUseDiversityinBoston/Dashboard1&#34;&gt;&lt;em&gt;see data on Tableau Public&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;What policy, design and planning changes can be made to transform each zone into a self-sustaining 15-minute walk zone?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Narrative&lt;/strong&gt;
+* Who and where will interventions make the most difference?
+* How can we avoid falling into the systematic bias created by 20 th century urban planning?
+* How can we create a general purpose analysis to evaluate 15-minute accessibility for any city?&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pedestrianizing-the-south-end&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Pedestrianizing the South End:&lt;/h2&gt;
+&lt;p&gt;Boston’s South End creates a strong case for a carfree neighborhood: dense and surrounded by multiple high frequency transit options, it is interestingly placed as a residential neighborhood within the city.&lt;/p&gt;
+&lt;p&gt;With no residential unit more than 300 meters away from either a MBTAbus, Green line, or Orange line station, the area also has a low car dependency. The area is bound by Mass Ave, Huntington Ave, and Washington St. With Dartmouth St, Newton St, Tremont St, and Columbus Ave dividing the neighborhood into 8 blocks. Converted to alternating one-ways, (with bidirectional bike lanes and bus lanes where required)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/15_min_boston/ped_southend-01.png&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Visualizing The Pune Tree Census 2015</title>
+      <link>/project/pune_trees/</link>
+      <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/project/pune_trees/</guid>
+      <description>&lt;h1 id=&#34;pune-tree-census-2015&#34;&gt;Pune Tree Census 2015&lt;/h1&gt;
+&lt;p&gt;The Tree Census was first conducted in 2015, and enumerated data on 3.2 million trees spread across the Municipal limits of Pune city. According to T.V. Ramachandran from the IISc, a ratio of 1 tree per person is required for a healthy urban environment. Given that the 2011 census indicated a human population of 3.12 million, we can consider this to be a healthy coverage. However we can also see a large imbalance in the location of these trees, with some areas having a greater density.&lt;/p&gt;
+&lt;h2 id=&#34;monthly-flowering-pattern&#34;&gt;Monthly Flowering Pattern&lt;/h2&gt;
+&lt;p&gt;Despite being in the tropics, vegetation in Pune shows seasonal variation in both foliage and flowers.&lt;/p&gt;
+&lt;p&gt;These series of maps show which areas in the city flowers bloom by season or month. Flowering season peaks in the summer from March to May.&lt;/p&gt;
+&lt;p&gt;In June with the advent of the monsoon, trees are green again, with flowering decreasing steadily through the winter months, until it’s summer again. By December, almost all the flowers are gone.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/01jan.jpg&#34; alt=&#34;january flowering&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/02feb.jpg&#34; alt=&#34;february flowering&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/03mar.jpg&#34; alt=&#34;march flowering&#34;&gt;&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/04apr.jpg&#34; alt=&#34;april flowering&#34;&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/05may.jpg&#34; alt=&#34;may flowering&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/06jun.jpg&#34; alt=&#34;june flowering&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/07jul.jpg&#34; alt=&#34;july flowering&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/08aug.jpg&#34; alt=&#34;august flowering&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/09sep.jpg&#34; alt=&#34;september flowering&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/10oct.jpg&#34; alt=&#34;october&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/11nov.jpg&#34; alt=&#34;november&#34;&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/pune_trees/12dec.jpg&#34; alt=&#34;december&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;flowering-animation&#34;&gt;Flowering Animation:&lt;/h2&gt;
+&lt;p&gt;These combined in an animated GIF file produce the following animation:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/project/pune_trees/pune_flowers_gif.gif&#34; alt=&#34;monthly animation&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Profiling the sidewalks of Boston</title>
+      <link>/project/sidewalks/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      <guid>/project/sidewalks/</guid>
+      <description>
+
+
+&lt;div id=&#34;boston-sidewalks&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Boston Sidewalks&lt;/h1&gt;
+&lt;p&gt;Profiling the sidewalks of Boston from a social distancing point of view.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sidewalk Stress Index&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;To develop the sidewalk stress index, we considered two criteria:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Population Density:
+Obtained from the &lt;a href=&#34;https://hifld-geoplatform.opendata.arcgis.com/datasets/landscan-usa&#34;&gt;LandScan datasource&lt;/a&gt;. Provides day and night incident population for a given area. It is a raster dataset with a pixel of approximately 90m by 90m size.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sidewalk Width:
+Obtained from the &lt;a href=&#34;https://data.boston.gov/dataset/sidewalk-inventory&#34;&gt;Analyze Boston&lt;/a&gt; which is the City of Boston’s open data hub. It includes data on sidewalk segments in the City of Boston. The main variable we are interested in is the Sidewalk Width, which is in feet.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By converting the raster population data into polygons, the mean sidewalk width incident on the cell was calculated with a spatial join.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(sf)
+library(dplyr)
+
+# Normalizing data to export as a shp file
+
+ls_day_boston &amp;lt;- read_sf(&amp;quot;landscan_r_analysis/boston_day_stress/boston_day_stress.shp&amp;quot;)
+ls_ngt_boston &amp;lt;- read_sf(&amp;quot;landscan_r_analysis/boston_night_stress/boston_night_stress.shp&amp;quot;)
+
+# Calculating percentile rank to get normalized data:
+
+# daytime population:
+ls_day_boston$nrm_pop_dy &amp;lt;- percent_rank(ls_day_boston$gridcode)
+ls_day_boston$nrm_swk_dy &amp;lt;- percent_rank(ls_day_boston$SWK_WIDTH)
+ls_day_boston$stress_dy &amp;lt;- ls_day_boston$nrm_pop_dy-ls_day_boston$nrm_swk_dy
+
+#nighttime population
+ls_ngt_boston$nrm_pop_nt &amp;lt;- percent_rank(ls_ngt_boston$gridcode)
+ls_ngt_boston$nrm_swk_nt &amp;lt;- percent_rank(ls_ngt_boston$SWK_WIDTH)
+ls_ngt_boston$stress_nt &amp;lt;- ls_ngt_boston$nrm_pop_nt-ls_ngt_boston$nrm_swk_nt
+
+# saving shapefiles
+st_write(ls_day_boston, &amp;quot;landscan_r_analysis/boston_day_stress/boston_day_stress.shp&amp;quot;, delete_layer = TRUE)
+st_write(ls_ngt_boston, &amp;quot;landscan_r_analysis/boston_night_stress/boston_night_stress.shp&amp;quot;, delete_layer = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Both values were normalized by percentile ranking between 0 &amp;amp; 1. By subtracting each cell’s normalized population, with its corresponding normalized mean sidewalk width, we could compare (city-wide) how high or low the ratio was compared to the city-wide average. A negative score indicates lower than average stress, and a positive score indicates higher than average stress. Thus, we can consider &lt;strong&gt;four&lt;/strong&gt; situational extremes:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Positive Score:&lt;/strong&gt; 0.01 to +1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Low Density &amp;amp; High Sidewalk width&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;High Density &amp;amp; Low Sidewalk width&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Negative Score:&lt;/strong&gt; -1 to -0.01&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Low Density &amp;amp; Low Sidewalk width&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;High Density &amp;amp; High Sidewalk width&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Neutral Score:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The fifth situation, would be a score of 0, indicating said location has a stress score comparable to the city-wide average.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sidewalks – Are they good enough?&lt;/p&gt;
+&lt;p&gt;Social distancing norms in the wake of the Covid-19 outbreak suggest keeping a distance of at least 6 feet from another person when outdoors.&lt;/p&gt;
+&lt;p&gt;Can we say something about where physical distancing by looking at Boston’s sidewalks?
+Can we estimate which areas are more likely to conform to distancing guidelines based on combining sidewalk and other data?&lt;/p&gt;
+&lt;p&gt;To ensure that residents are able to comply with social distancing guidelines Many cities have restricted vehicular traffic on certain streets, or extended ‘sidewalks’ by taking in lanes by adding flex posts or traffic cones.&lt;/p&gt;
+&lt;p&gt;This idea is being developed in collaboration with &lt;a href=&#34;https://uploads.knightlab.com/storymapjs/158f477ab79c7702de8c33b817ddae41/varun-resume/index.html&#34;&gt;Varun Adibhatla&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Data&lt;/strong&gt;
+1. Polyline and polygon shapefiles of sidewalks for the city of Boston. These can be used to identify sections of sidewalks and streets which do not adequately serve width regulations.&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.ornl.gov/news/gis-landscan-goes-public&#34;&gt;LandScan data&lt;/a&gt; - Widely considered the “gold standard of population and mapping data in the United States, (this dataset) captures daytime and nighttime activity of the U.S. population at a resolution of roughly 90 meters or about 300 feet.”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Profile Boston Sidewalks for completeness and quality&lt;/li&gt;
+&lt;li&gt;Join with Landscan data&lt;/li&gt;
+&lt;li&gt;Identify areas with high/low sidewalk&amp;lt;&amp;gt;human activity&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.esri.com/arcgis-blog/products/arcgis-online/mapping/what-is-a-relationship-map/&#34;&gt;Build a relationship map&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Identify areas that are likely to be infection hotspots (high population activity, low sidewalk widths)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div id=&#34;minute-boston&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;15-minute Boston&lt;/h2&gt;
+&lt;p&gt;Paris, under their mayor Anne Hidalgo is working to completely transform how people move around their city by introducing &lt;a href=&#34;https://www.citylab.com/environment/2020/02/paris-election-anne-hidalgo-city-planning-walks-stores-parks/606325/&#34;&gt;the ’15-minute’ city&lt;/a&gt;, where all aspects of a person’s life are achievable within a 15-minute walk, bike, or transit ride from their residence.&lt;/p&gt;
+&lt;p&gt;A project of this scale and magnitude will be required to be staged and completed in phases. If we consider the city of Boston, Massachusetts, how can we adapt this ’15-minute’ city plan here, taking into account its unique strengths, weaknesses, opportunities, and challenges?&lt;/p&gt;
+&lt;p&gt;Understandably, Boston’s current configuration does not allow for such a situation. Furthermore, a 15 minute walk is significantly shorter than a 15 minute bike ride, and generally speaking public transit will take you further than a bike in 15 minutes.&lt;/p&gt;
+&lt;p&gt;In what ways would Boston’s land-use configuration have to change, to accomodate these requirements? Does it really make sense to concentrate all businesses in one centralized ‘downtown’ area or Financial District?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Analysis&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can we use POI data to evaluate the accessibility of various 15-minute regions based on population and car ownership?&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://towardsdatascience.com/measuring-pedestrian-accessibility-97900f9e4d56&#34;&gt;Can we create accessibility maps&lt;/a&gt; that allow Paris and other cities identify which areas require more amenities to make it eligible under a 15-minute accessible region?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;minute-walk-zones&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;15 Minute Walk Zones&lt;/h3&gt;
+&lt;p&gt;By generating hexagonal tesselations of side equal to 1 mile (the generally accepted distance an average person can walk in 15 minutes) we divide the City of Boston into zones equalling a 1 mile radius. Since the radius of 1 mile is equal to the side of the hexagon, the circumscribed radius is also equal to 1 mile. This effectively creates (for each 1-mile hexagon) up to 6 overlapping zones with neighboring hexagons.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;1 mile radius hexagons&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;1 mile radius overlapping circles&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_walk.png&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_walk_circles.png&#34; /&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Working with the existing urban layout and physical infrastructure, how do we ensure that all the above mentioned services can be made available within this 1-mile zone?
+We mapped these two layers together: by getting the proportion of land covered under each major use type, how does each zone compare to the city-wide average?&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;bos_zones_ratio &amp;lt;- bos_zones %&amp;gt;% 
+                    select(SUBDISTRIC, area_sqm) %&amp;gt;% 
+                    group_by(SUBDISTRIC) %&amp;gt;% 
+                    summarise(area_sqm = sum(area_sqm))
+
+bos_zones_ratio$landuseratio &amp;lt;- (bos_zones_ratio$area_sqm/sum(bos_zones_ratio$area_sqm))*100
+
+bos_15minzones_ratio &amp;lt;- bos_15minzones %&amp;gt;% 
+  select(TARGET_FID, SUBDISTRIC, area_sqm) %&amp;gt;% 
+  group_by(TARGET_FID, SUBDISTRIC) %&amp;gt;% 
+  summarise(area_sqm = sum(area_sqm)) %&amp;gt;% 
+  mutate(landuseratio = (area_sqm/sum(area_sqm))*100)&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Land Use for Boston City&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Land use proportions&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_landuse.png&#34; /&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/15_min_landuse_tableau.png&#34; /&gt; &lt;a href=&#34;https://public.tableau.com/profile/aseem.deodhar#!/vizhome/LandUseDiversityinBoston/Dashboard1&#34;&gt;&lt;em&gt;see data on Tableau Public&lt;/em&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;What policy, design and planning changes can be made to transform each zone into a self-sustaining 15-minute walk zone?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Narrative&lt;/strong&gt;
+* Who and where will interventions make the most difference?
+* How can we avoid falling into the systematic bias created by 20 th century urban planning?
+* How can we create a general purpose analysis to evaluate 15-minute accessibility for any city?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Potential Interventions&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;As we identified in our map, there are 4 key typologies we observe with regard to the Sidewalk Stress Index. These areas have different urban-level characteristics apart from just the Sidewalk Stress Index: their land-use typologies may vary, as can through vehicle volume, availability of public transit and alternative mobility needs, as well as parking requirements. All these factors affect the urban morphology of the neighborhood. Thus we identify a few areas in Boston which correspond to these typologies, and work out urban design interventions aimed at handling incident sidewalk stress:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;center&#34;&gt;Density&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Sidewalk Width&lt;/th&gt;
+&lt;th align=&#34;left&#34;&gt;Example Locality&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Current View&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;Proposed View&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;High&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;High&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Copley Square&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/copley_1_old.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/copley_1_old.jpg&#34; alt=&#34;Copley Square Old View&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/copley_1_new.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/copley_1_new.jpg&#34; alt=&#34;Copley Square New View&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;Low&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Low&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Field’s Corner&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/fieldscorner_1_old.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/fieldscorner_1_old.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/fieldscorner_1_new.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/fieldscorner_1_new.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;Low&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;High&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Franklin Park&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/franklinpk_1_old.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/franklinpk_1_old.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/franklinpk_1_new.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/franklinpk_1_new.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;center&#34;&gt;High&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;Low&lt;/td&gt;
+&lt;td align=&#34;left&#34;&gt;Financial District/Old State House&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/oldstatehouse_4_old.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/oldstatehouse_4_old.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;a href=&#34;https://github.com/aseemdeodhar/BostonSidewalks/blob/master/images_sketchup3d/oldstatehouse_4_new.jpg&#34;&gt;&lt;img src=&#34;/img/project/sidewalks/oldstatehouse_4_new.jpg&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
